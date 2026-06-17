@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://usb6oiylg8jk"]
+
+[ext_resource type="Texture2D" uid="uid://cbscpx50jksho" path="res://assets/sprites/Diamond Gauntlet.png" id="1_rtg0x"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_80n1t"]
+
+[resource]
+script = ExtResource("2_80n1t")
+id = "diamond_gauntlets"
+name = "Găng tay kim cương"
+description = "Giáp tay làm từ kim cương.
++ 5 giáp"
+icon = ExtResource("1_rtg0x")
+item_type = 2
+base_value = 6
+slot_type = 3
+armor = 50

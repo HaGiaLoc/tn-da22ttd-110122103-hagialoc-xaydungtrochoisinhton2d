@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://c4j2dbhokg88c"]
+
+[ext_resource type="Texture2D" uid="uid://bgdudqlpuabvk" path="res://assets/sprites/Rope.png" id="1_ma57s"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_s5y1f"]
+
+[resource]
+script = ExtResource("1_s5y1f")
+id = "rope"
+name = "Dây thừng"
+description = "Dây thừng được bện từ sợi cỏ. Nguyên liệu chế tạo cơ bản"
+icon = ExtResource("1_ma57s")
+stackable = true
+max_stacks = 99
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

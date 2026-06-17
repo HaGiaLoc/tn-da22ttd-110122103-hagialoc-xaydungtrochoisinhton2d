@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://hxfbcsdqejwp"]
+
+[ext_resource type="Texture2D" uid="uid://cu3t2dg76pt6e" path="res://assets/sprites/Copper Gauntlet.png" id="1_wjkvv"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_qgt4d"]
+
+[resource]
+script = ExtResource("2_qgt4d")
+id = "copper_gauntlets"
+name = "Găng tay đồng"
+description = "Giáp tay làm từ đồng.
++ 1 giáp"
+icon = ExtResource("1_wjkvv")
+item_type = 2
+base_value = 6
+slot_type = 3
+armor = 10

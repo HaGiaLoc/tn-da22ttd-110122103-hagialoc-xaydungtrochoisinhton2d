@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cb3gnbydyk48s"
+path="res://.godot/imported/footstep_grass#2.mp3-3dd3718fd597f03510c1b7bcc169d4cb.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/sound effects/footstep_grass#2.mp3"
+dest_files=["res://.godot/imported/footstep_grass#2.mp3-3dd3718fd597f03510c1b7bcc169d4cb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

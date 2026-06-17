@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://33h6e74tgvkm"]
+
+[ext_resource type="Script" uid="uid://bxbjov506rsqg" path="res://scripts/Resource/ResourceSpawner.gd" id="1_rs"]
+[ext_resource type="PackedScene" uid="uid://b50ld24o2jhhf" path="res://scenes/Resource/Node/ore_diamond.tscn" id="2_scene"]
+
+[node name="SpawnerOreDiamond" type="Node2D" unique_id=2106501225]
+script = ExtResource("1_rs")
+resource_scene = ExtResource("2_scene")
+respawn_time = 600.0

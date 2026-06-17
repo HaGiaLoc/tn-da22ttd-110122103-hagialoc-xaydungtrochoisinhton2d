@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://cgroyvbwmr7av"]
+
+[ext_resource type="Texture2D" uid="uid://xnwrc1p0va5s" path="res://assets/sprites/Gold Boots.png" id="1_mtkab"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_lwp7d"]
+
+[resource]
+script = ExtResource("2_lwp7d")
+id = "gold_boots"
+name = "Giày vàng"
+description = "Giáp chân làm từ vàng.
++ 1 giáp"
+icon = ExtResource("1_mtkab")
+item_type = 2
+base_value = 6
+slot_type = 4
+armor = 10

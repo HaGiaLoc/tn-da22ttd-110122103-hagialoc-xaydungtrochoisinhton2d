@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="BuildingRecipe" format=3 uid="uid://cl0iqiijjplte"]
+
+[ext_resource type="Script" uid="uid://dgc5ahm54u2hk" path="res://scripts/InventorySystem/building/BuildIngredient.gd" id="1_bingr"]
+[ext_resource type="Texture2D" uid="uid://bjvwcvfb46ltk" path="res://assets/sprites/Crafting Stations/Ult Pack Crafting Table.png" id="1_dj2a6"]
+[ext_resource type="Script" uid="uid://bp6ueoekj32cp" path="res://scripts/InventorySystem/building/BuildingRecipe.gd" id="2_brcp"]
+
+[sub_resource type="Resource" id="Resource_ing1"]
+script = ExtResource("1_bingr")
+item_id = "stick"
+quantity = 4
+
+[sub_resource type="Resource" id="Resource_ing2"]
+script = ExtResource("1_bingr")
+item_id = "wood"
+quantity = 4
+
+[sub_resource type="Resource" id="Resource_dj2a6"]
+script = ExtResource("1_bingr")
+item_id = "rope"
+quantity = 3
+metadata/_custom_type_script = "uid://dgc5ahm54u2hk"
+
+[resource]
+script = ExtResource("2_brcp")
+display_name = "Bàn chế tạo"
+icon = ExtResource("1_dj2a6")
+building_scene = "uid://c881w1xi64e7w"
+ingredients = Array[Resource]([SubResource("Resource_ing1"), SubResource("Resource_ing2"), SubResource("Resource_dj2a6")])

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlnvrefau1i7s"
+path="res://.godot/imported/crafting_table_sound.mp3-3f68d4595baa46f02c6d0046567b15c8.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/sound effects/crafting_table_sound.mp3"
+dest_files=["res://.godot/imported/crafting_table_sound.mp3-3f68d4595baa46f02c6d0046567b15c8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

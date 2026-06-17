@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://cary80elxk1yb"]
+
+[ext_resource type="Texture2D" uid="uid://xtc4cko3qjp6" path="res://assets/sprites/Gold Gauntlet.png" id="1_wyuk3"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_5te4f"]
+
+[resource]
+script = ExtResource("2_5te4f")
+id = "gold_gauntlets"
+name = "Găng tay vàng"
+description = "Giáp tay làm từ vàng.
++ 2 giáp"
+icon = ExtResource("1_wyuk3")
+item_type = 2
+base_value = 6
+slot_type = 3
+armor = 20

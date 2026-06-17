@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://cr16lbejq16hh"]
+
+[ext_resource type="Texture2D" uid="uid://csv52k3qc5owo" path="res://assets/sprites/I_GoldCoin.png" id="1_fvrfq"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_vfklx"]
+
+[resource]
+script = ExtResource("2_vfklx")
+id = "gold_coin"
+name = "Đồng vàng"
+description = "Đồng tiền dùng cho trao đổi với người khác"
+icon = ExtResource("1_fvrfq")
+stackable = true
+max_stacks = 99
+base_value = 0
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

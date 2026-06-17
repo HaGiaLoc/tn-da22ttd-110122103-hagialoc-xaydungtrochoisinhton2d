@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="LootTable" format=3 uid="uid://ua58cblbwgvb"]
+
+[ext_resource type="Script" uid="uid://br7vna1vjxrf6" path="res://scripts/InventorySystem/loot/LootEntry.gd" id="1_cckrs"]
+[ext_resource type="Script" uid="uid://06l8l7mfajeq" path="res://scripts/InventorySystem/loot/LootTable.gd" id="1_xr0eb"]
+
+[sub_resource type="Resource" id="Resource_h44u6"]
+script = ExtResource("1_cckrs")
+item_id = "raw_meat"
+quantity_max = 2
+metadata/_custom_type_script = "uid://br7vna1vjxrf6"
+
+[sub_resource type="Resource" id="Resource_jljo1"]
+script = ExtResource("1_cckrs")
+item_id = "wolf_fang"
+drop_chance = 25.0
+metadata/_custom_type_script = "uid://br7vna1vjxrf6"
+
+[resource]
+script = ExtResource("1_xr0eb")
+entries = Array[Resource]([SubResource("Resource_h44u6"), SubResource("Resource_jljo1")])
+metadata/_custom_type_script = "uid://06l8l7mfajeq"

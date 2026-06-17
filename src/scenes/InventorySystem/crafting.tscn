@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b02lgirne4y80"]
+
+[ext_resource type="Script" uid="uid://ddrhr2hwkekmj" path="res://scripts/InventorySystem/crafting/CraftingInventory.gd" id="1_crafting"]
+[ext_resource type="Script" uid="uid://dv3wrycrb3qr3" path="res://scripts/InventorySystem/crafting/CraftingComponent.gd" id="2_component"]
+
+[node name="Crafting" type="PanelContainer" unique_id=621032004 node_paths=PackedStringArray("recipe_list")]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -193.0
+offset_right = 260.0
+offset_bottom = 193.0
+grow_vertical = 2
+script = ExtResource("1_crafting")
+recipe_list = NodePath("MarginContainer/VBoxContainer/RecipeListWrapper/RecipeList")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1761850670]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1244755683]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1477510408]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Công thức"
+horizontal_alignment = 1
+
+[node name="RecipeListWrapper" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=925235884]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RecipeList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/RecipeListWrapper" unique_id=925235883]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/RecipeListWrapper" unique_id=925235885]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CraftingComponent" type="Node" parent="." unique_id=394968456]
+script = ExtResource("2_component")

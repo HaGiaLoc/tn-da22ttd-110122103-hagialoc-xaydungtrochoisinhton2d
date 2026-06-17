@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cx60uayb18f8e"]
+
+[ext_resource type="Script" uid="uid://deurhoovott5q" path="res://scripts/Global/TutorialUI.gd" id="1_tui"]
+
+[node name="TutorialUI" type="CanvasLayer"]
+layer = 90
+script = ExtResource("1_tui")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -350.0
+offset_bottom = 180.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "- NHIỆM VỤ SINH TỒN -"
+horizontal_alignment = 1
+
+[node name="ObjectiveLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Nhiệm vụ mẫu ở đây"
+autowrap_mode = 3

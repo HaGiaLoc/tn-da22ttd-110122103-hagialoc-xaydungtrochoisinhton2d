@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://c5og3lj130610"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_itembase"]
+[ext_resource type="Texture2D" uid="uid://b0rgot1mpt2xm" path="res://assets/sprites/Materials/Ult Pack Materials Diamond.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_itembase")
+id = "diamond"
+name = "Kim Cương"
+description = "Khoáng sản cực kỳ quý hiếm và cứng. Dùng để chế tạo trang bị cao cấp."
+icon = ExtResource("2_icon")
+stackable = true
+max_stacks = 99
+base_value = 20

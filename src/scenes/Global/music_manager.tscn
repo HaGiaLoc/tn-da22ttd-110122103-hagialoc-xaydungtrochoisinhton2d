@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cswx5vix57k3f"]
+
+[ext_resource type="Script" uid="uid://bdm420iggtwj4" path="res://scripts/Global/MusicManager.gd" id="1_music"]
+[ext_resource type="AudioStream" uid="uid://dsbee7mta5ok0" path="res://assets/sounds/musics/fato_shadow_-_wild_land.mp3" id="2_fi71e"]
+[ext_resource type="AudioStream" uid="uid://cpl7fpmfolxbm" path="res://assets/sounds/musics/forest_river_spirits.mp3" id="2_skxwj"]
+[ext_resource type="AudioStream" uid="uid://b5ns5usft5jbx" path="res://assets/sounds/musics/cavern.mp3" id="3_fi71e"]
+[ext_resource type="AudioStream" uid="uid://c6385s38xpvhl" path="res://assets/sounds/musics/Battle_03.mp3" id="4_t7lfu"]
+[ext_resource type="AudioStream" uid="uid://c65ymb0wv3dcm" path="res://assets/sounds/musics/Battle_04.mp3" id="5_tfir1"]
+[ext_resource type="AudioStream" uid="uid://bfy2apgch2oub" path="res://assets/sounds/musics/forest_1.mp3" id="6_wu8jm"]
+[ext_resource type="AudioStream" uid="uid://b0dder47t7n0c" path="res://assets/sounds/musics/sunnydayoutside.mp3" id="7_wu8jm"]
+[ext_resource type="AudioStream" uid="uid://dsqohkoc67fcf" path="res://assets/sounds/musics/tragic_ambient.mp3" id="9_kyf41"]
+[ext_resource type="AudioStream" uid="uid://vyg2l5hgp630" path="res://assets/sounds/musics/menu.mp3" id="10_btwun"]
+[ext_resource type="AudioStream" uid="uid://c6bc3ilxeitnk" path="res://assets/sounds/musics/noobusescape.mp3" id="11_di2td"]
+
+[node name="MusicManager" type="AudioStreamPlayer" unique_id=479704421]
+process_mode = 3
+bus = &"Music"
+script = ExtResource("1_music")
+tracks = {
+"combat_1": ExtResource("2_fi71e"),
+"combat_2": ExtResource("3_fi71e"),
+"combat_3": ExtResource("4_t7lfu"),
+"combat_4": ExtResource("5_tfir1"),
+"day_1": ExtResource("6_wu8jm"),
+"day_2": ExtResource("2_skxwj"),
+"day_3": ExtResource("7_wu8jm"),
+"lose": ExtResource("9_kyf41"),
+"menu": ExtResource("10_btwun"),
+"win": ExtResource("11_di2td")
+}

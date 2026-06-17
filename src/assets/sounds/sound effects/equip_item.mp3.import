@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnod43qcf4l16"
+path="res://.godot/imported/equip_item.mp3-6b68309c1b95fcaead5433c191bc5730.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/sound effects/equip_item.mp3"
+dest_files=["res://.godot/imported/equip_item.mp3-6b68309c1b95fcaead5433c191bc5730.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

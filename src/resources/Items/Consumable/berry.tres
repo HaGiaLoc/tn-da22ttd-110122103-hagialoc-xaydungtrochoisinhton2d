@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://c3wsibx25qex7"]
+
+[ext_resource type="Texture2D" uid="uid://tggqave2fw5x" path="res://assets/sprites/Food/Ult Pack Food Cherry's.png" id="1_6o0bv"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_6idva"]
+
+[resource]
+script = ExtResource("2_6idva")
+id = "berry"
+name = "Quả dại"
+description = "Quả dại rơi ra từ bụi cây.
++ 5 điểm Đói"
+icon = ExtResource("1_6o0bv")
+item_type = 1
+stackable = true
+max_stacks = 99
+restore_health = 1
+restore_hunger = 5
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

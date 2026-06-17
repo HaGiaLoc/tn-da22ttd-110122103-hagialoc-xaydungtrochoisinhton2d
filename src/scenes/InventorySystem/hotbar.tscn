@@ -1,0 +1,40 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://b2ksl34te2njc" path="res://scripts/InventorySystem/hotbar/Hotbar.gd" id="1_hotbar"]
+[ext_resource type="Script" uid="uid://duvlvoudl5ien" path="res://scripts/InventorySystem/inventory/InventoryModel.gd" id="2_invmod"]
+[ext_resource type="Script" uid="uid://ds36rdenwvk80" path="res://scripts/InventorySystem/inventory/InventoryView.gd" id="3_invview"]
+[ext_resource type="Resource" path="res://resources/hotbar_config.tres" id="4_hbcfg"]
+
+[node name="Hotbar" type="Control"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -60.0
+offset_right = 144.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_hotbar")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=200000001]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="HotbarModel" type="PanelContainer" parent="." unique_id=200000002]
+visible = false
+layout_mode = 1
+script = ExtResource("2_invmod")
+id = "hotbar"
+config = ExtResource("4_hbcfg")
+
+[node name="InventoryView" type="HBoxContainer" parent="HotbarModel" unique_id=200000003]
+layout_mode = 2
+script = ExtResource("3_invview")

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://ds1bs1bfuy5lx"]
+
+[ext_resource type="Texture2D" uid="uid://bxwb8usdousrc" path="res://assets/sprites/Diamond Sword.png" id="1_ggykm"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_vjqmb"]
+
+[resource]
+script = ExtResource("2_vjqmb")
+id = "diamond_sword"
+name = "Kiếm kim cương"
+description = "Thank kiếm được làm từ kim cương, gây sát thương chí mạng cho đa số sinh vật.
++ 25 Sát thương"
+icon = ExtResource("1_ggykm")
+item_type = 2
+base_value = 3
+slot_type = 5
+damage = 25
+attack_speed = 1.0

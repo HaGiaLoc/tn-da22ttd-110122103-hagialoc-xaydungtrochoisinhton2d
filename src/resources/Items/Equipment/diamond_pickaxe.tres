@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://dmswsitx01fx6"]
+
+[ext_resource type="Texture2D" uid="uid://mu4cqv1thd6d" path="res://assets/sprites/Diamond Pickaxe.png" id="1_4irg2"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_mjhdq"]
+
+[resource]
+script = ExtResource("2_mjhdq")
+id = "diamond_pickaxe"
+name = "Cuốc Kim Cương"
+description = "Cuốc làm từ kim cương, dùng để khai thác đá và quặng.
++ 5 Hiệu suất khai thác"
+icon = ExtResource("1_4irg2")
+item_type = 2
+base_value = 4
+slot_type = 7
+mining_efficiency = 5.0

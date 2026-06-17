@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c4w7686hf5jv1"]
+
+[ext_resource type="Script" uid="uid://ddrhr2hwkekmj" path="res://scripts/InventorySystem/crafting/CraftingInventory.gd" id="1_7gv40"]
+[ext_resource type="Script" uid="uid://dv3wrycrb3qr3" path="res://scripts/InventorySystem/crafting/CraftingComponent.gd" id="2_qddem"]
+[ext_resource type="Resource" uid="uid://s6qd5l2g2wdw" path="res://resources/Recipes/cooked_meat_recipe.tres" id="3_g6r13"]
+
+[node name="Crafting Station UI" type="PanelContainer" unique_id=621032004 node_paths=PackedStringArray("recipe_list")]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -175.0
+offset_right = 250.0
+offset_bottom = 175.0
+grow_vertical = 2
+script = ExtResource("1_7gv40")
+recipe_list = NodePath("MarginContainer/VBoxContainer/RecipeList")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1761850670]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1244755683]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=1477510408]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Công thức"
+horizontal_alignment = 1
+
+[node name="DismantleButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25, 0.25, 1)
+text = "Phá dỡ"
+
+[node name="RecipeList" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=925235883]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CraftingComponent" type="Node" parent="." unique_id=394968456]
+script = ExtResource("2_qddem")
+recipes = Array[Resource]([ExtResource("3_g6r13")])

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bh21r6p610xyf"]
+
+[ext_resource type="Texture2D" uid="uid://b1ge4suiwhbbe" path="res://assets/sprites/Gold Sword.png" id="1_v17k2"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_wlo21"]
+
+[resource]
+script = ExtResource("2_wlo21")
+id = "gold_sword"
+name = "Kiếm vàng"
+description = "Thank kiếm được làm từ vàng, gây sát thương đáng kể cho đa số sinh vật.
++ 20 Sát thương"
+icon = ExtResource("1_v17k2")
+item_type = 2
+base_value = 3
+slot_type = 5
+damage = 20
+attack_speed = 1.0

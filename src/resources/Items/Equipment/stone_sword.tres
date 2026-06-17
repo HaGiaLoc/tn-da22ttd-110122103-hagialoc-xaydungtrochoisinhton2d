@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://daxc2c1226uk0"]
+
+[ext_resource type="Texture2D" uid="uid://cao30ccqqxkum" path="res://assets/sprites/Stone Sword.png" id="1_rs7jg"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_l1wwj"]
+
+[resource]
+script = ExtResource("2_l1wwj")
+id = "stone_sword"
+name = "Kiếm đá"
+description = "Kiếm làm từ đá, dùng để gây sát thương.
++ 10 Sát thương."
+icon = ExtResource("1_rs7jg")
+item_type = 2
+base_value = 4
+slot_type = 5
+damage = 10
+attack_speed = 1.0
+mining_efficiency = 1.0

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://cbna6pn0gma4t"]
+
+[ext_resource type="Texture2D" uid="uid://cecsnkp5p11tj" path="res://assets/sprites/P_Red02.png" id="1_fkkp3"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="3_008l1"]
+
+[resource]
+script = ExtResource("3_008l1")
+id = "health_potion"
+name = "Bình máu"
+description = "Bình máu dùng để hồi máu.
++ 20 điểm Máu"
+icon = ExtResource("1_fkkp3")
+item_type = 1
+stackable = true
+max_stacks = 10
+base_value = 4
+restore_health = 20
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

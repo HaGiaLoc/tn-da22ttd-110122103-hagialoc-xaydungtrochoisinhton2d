@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://b37q7xpe162e5"]
+
+[ext_resource type="Texture2D" uid="uid://cjudra1g4w0cb" path="res://assets/sprites/Branch.png" id="1_8qs8k"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_dl8g7"]
+
+[resource]
+script = ExtResource("2_dl8g7")
+id = "branch"
+name = "Cành cây"
+description = "Cành cây gỗ thu thập từ cây rừng. Nguyên liệu chế tạo cơ bản."
+icon = ExtResource("1_8qs8k")
+stackable = true
+max_stacks = 99
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

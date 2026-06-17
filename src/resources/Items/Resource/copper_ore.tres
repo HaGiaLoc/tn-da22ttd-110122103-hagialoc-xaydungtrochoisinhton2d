@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://c54rqvf5cqvi3"]
+
+[ext_resource type="Texture2D" uid="uid://byxyi36dl70d3" path="res://assets/sprites/Materials/Ult Pack Materials Copper Ore.png" id="1_i1bif"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_2686c"]
+
+[resource]
+script = ExtResource("2_2686c")
+id = "copper_ore"
+name = "Quặng Đồng"
+description = "Quặng đồng phổ biến. Dùng để chế tạo tinh luyện thỏi đồng."
+icon = ExtResource("1_i1bif")
+stackable = true
+max_stacks = 99
+base_value = 3

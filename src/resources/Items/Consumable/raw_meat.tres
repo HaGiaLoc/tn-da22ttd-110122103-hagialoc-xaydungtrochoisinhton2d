@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://cbok454vbwd6o"]
+
+[ext_resource type="Texture2D" uid="uid://c6w4spa7mwnm1" path="res://assets/sprites/Food/Ult Pack Food Raw Steak.png" id="1_hufqc"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_rsh0s"]
+
+[resource]
+script = ExtResource("1_rsh0s")
+id = "raw_meat"
+name = "Thịt sống"
+description = "Thịt chưa qua xử lý.
++ 10 điểm Đói
+- 5 điểm Máu"
+icon = ExtResource("1_hufqc")
+item_type = 1
+stackable = true
+max_stacks = 99
+restore_health = -5
+restore_hunger = 10
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

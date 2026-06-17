@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://ctp885jxwxi8e"]
+
+[ext_resource type="Script" uid="uid://cfv73gtv6c8ij" path="res://scripts/Building/Portal.gd" id="1_portal"]
+[ext_resource type="Texture2D" uid="uid://dvb6lqajpnreg" path="res://assets/sprites/Portal/Portal.png" id="2_portal_tex"]
+[ext_resource type="Texture2D" uid="uid://dxey53kdpk8bq" path="res://assets/sprites/Portal/North Portal Rune.png" id="3_north"]
+[ext_resource type="Texture2D" uid="uid://dahnqocf4i3wu" path="res://assets/sprites/Portal/Dimensional_Portal.png" id="4_3bret"]
+[ext_resource type="Texture2D" uid="uid://bffdf2bpkp80b" path="res://assets/sprites/Portal/South Portal Rune.png" id="4_south"]
+[ext_resource type="Texture2D" uid="uid://hlyqwajsv2gh" path="res://assets/sprites/Portal/East Portal Rune.png" id="5_east"]
+[ext_resource type="Texture2D" uid="uid://cqt42affchi20" path="res://assets/sprites/Portal/West Portal Rune.png" id="6_west"]
+[ext_resource type="PackedScene" uid="uid://def7vpf4f2wym" path="res://scenes/Building/portal_ui.tscn" id="7_portalui"]
+[ext_resource type="PackedScene" uid="uid://b4lnjphhlkyuh" path="res://scenes/win_screen.tscn" id="8_winscreen"]
+[ext_resource type="AudioStream" uid="uid://w18sjhm6jqgf" path="res://assets/sounds/sound effects/portal_activate.mp3" id="9_1t4uj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(94, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhh8e"]
+atlas = ExtResource("4_3bret")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qmfu"]
+atlas = ExtResource("4_3bret")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc4ub"]
+atlas = ExtResource("4_3bret")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nq31y"]
+atlas = ExtResource("4_3bret")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70jf6"]
+atlas = ExtResource("4_3bret")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7b1l"]
+atlas = ExtResource("4_3bret")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_210fj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhh8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qmfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc4ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nq31y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70jf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7b1l")
+}],
+"loop": true,
+"name": &"portal_activated",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ixnk4"]
+radius = 37.0
+height = 100.0
+
+[node name="Portal" type="StaticBody2D" unique_id=300000001 node_paths=PackedStringArray("rune_north", "rune_south", "rune_east", "rune_west")]
+collision_layer = 4096
+script = ExtResource("1_portal")
+portal_ui_scene = ExtResource("7_portalui")
+win_screen_scene = ExtResource("8_winscreen")
+rune_north = NodePath("RuneNorth")
+rune_south = NodePath("RuneSouth")
+rune_east = NodePath("RuneEast")
+rune_west = NodePath("RuneWest")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=300000002]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_body")
+
+[node name="PortalActivated" type="AnimatedSprite2D" parent="." unique_id=102071695]
+visible = false
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-3, -29)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_210fj")
+animation = &"portal_activated"
+frame_progress = 0.039937302
+
+[node name="SpritePortal" type="Sprite2D" parent="." unique_id=300000003]
+texture = ExtResource("2_portal_tex")
+
+[node name="RuneNorth" type="Sprite2D" parent="." unique_id=300000004]
+visible = false
+z_index = 1
+position = Vector2(-1, -30.5)
+texture = ExtResource("3_north")
+
+[node name="RuneSouth" type="Sprite2D" parent="." unique_id=300000005]
+visible = false
+z_index = 1
+position = Vector2(-1, 23.5)
+texture = ExtResource("4_south")
+
+[node name="RuneEast" type="Sprite2D" parent="." unique_id=300000006]
+visible = false
+z_index = 1
+position = Vector2(38, -3.5)
+texture = ExtResource("5_east")
+
+[node name="RuneWest" type="Sprite2D" parent="." unique_id=300000007]
+visible = false
+z_index = 1
+position = Vector2(-40, -3.5)
+texture = ExtResource("6_west")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=300000008]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=300000009]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ixnk4")
+
+[node name="HintLabel" type="Label" parent="." unique_id=300000010]
+visible = false
+z_index = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = -60.0
+offset_right = 80.0
+offset_bottom = -37.0
+grow_horizontal = 2
+text = "[F]"
+horizontal_alignment = 1
+
+[node name="PortalActivatePlayer" type="AudioStreamPlayer2D" parent="." unique_id=910279326]
+stream = ExtResource("9_1t4uj")

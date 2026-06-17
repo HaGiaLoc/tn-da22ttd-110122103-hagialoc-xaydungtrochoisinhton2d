@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://c7daq43wtlvad"]
+
+[ext_resource type="Script" uid="uid://coc1fuqd7wjwe" path="res://scripts/InventorySystem/crafting/CraftIngredient.gd" id="1_1ds1a"]
+[ext_resource type="Script" uid="uid://besc6jij5upui" path="res://scripts/InventorySystem/crafting/CraftingRecipe.gd" id="2_acya1"]
+
+[sub_resource type="Resource" id="Resource_agk5p"]
+script = ExtResource("1_1ds1a")
+item_id = "branch"
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[resource]
+script = ExtResource("2_acya1")
+result_item_id = "stick"
+ingredients = Array[Resource]([SubResource("Resource_agk5p")])
+metadata/_custom_type_script = "uid://besc6jij5upui"

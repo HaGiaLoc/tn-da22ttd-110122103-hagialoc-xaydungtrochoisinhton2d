@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nbj3tx3c4kn6"
+path="res://.godot/imported/chopping_wood.mp3-9758571b23b0a92782039c48b9eaa9a4.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/sound effects/chopping_wood.mp3"
+dest_files=["res://.godot/imported/chopping_wood.mp3-9758571b23b0a92782039c48b9eaa9a4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

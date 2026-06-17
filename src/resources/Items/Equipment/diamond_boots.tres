@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://dcp7s6jb88j54"]
+
+[ext_resource type="Texture2D" uid="uid://dmpewt5n8gns3" path="res://assets/sprites/Diamond Boots.png" id="1_4yaus"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_5w8yt"]
+
+[resource]
+script = ExtResource("2_5w8yt")
+id = "diamond_boots"
+name = "Giày kim cương"
+description = "Giáp chân làm từ kim cương.
++ 5 giáp"
+icon = ExtResource("1_4yaus")
+item_type = 2
+base_value = 6
+slot_type = 4
+armor = 50

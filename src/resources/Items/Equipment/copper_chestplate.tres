@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://cn1c10yc5jjg2"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_0o4oc"]
+[ext_resource type="Texture2D" uid="uid://b53cy6peo2uhw" path="res://assets/sprites/Copper Chestplate.png" id="1_eesef"]
+
+[resource]
+script = ExtResource("1_0o4oc")
+id = "copper_chestplate"
+name = "Giáp đồng"
+description = "Giáp thân làm từ đồng.
++ 2.5 giáp"
+icon = ExtResource("1_eesef")
+item_type = 2
+base_value = 6
+slot_type = 2
+armor = 25

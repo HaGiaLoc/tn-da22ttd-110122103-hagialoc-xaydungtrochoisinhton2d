@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BuildingRecipe" format=3 uid="uid://xysioc6o0p6b"]
+
+[ext_resource type="Texture2D" uid="uid://bw6liwsd4raby" path="res://assets/sprites/Crafting Stations/Ult Pack Anvil.png" id="1_xp8sh"]
+[ext_resource type="Script" uid="uid://dgc5ahm54u2hk" path="res://scripts/InventorySystem/building/BuildIngredient.gd" id="2_ypi8r"]
+[ext_resource type="Script" uid="uid://bp6ueoekj32cp" path="res://scripts/InventorySystem/building/BuildingRecipe.gd" id="3_hxkgh"]
+
+[sub_resource type="Resource" id="Resource_ing2"]
+script = ExtResource("2_ypi8r")
+item_id = "copper_ingot"
+quantity = 20
+
+[resource]
+script = ExtResource("3_hxkgh")
+display_name = "Đe"
+icon = ExtResource("1_xp8sh")
+building_scene = "uid://bvwoupyoii6d"
+ingredients = Array[Resource]([SubResource("Resource_ing2")])

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://c881w1xi64e7w"]
+
+[ext_resource type="Script" uid="uid://ub7dieb1ti1m" path="res://scripts/Building/CraftingTable.gd" id="1_bt8de"]
+[ext_resource type="PackedScene" uid="uid://c4w7686hf5jv1" path="res://scenes/InventorySystem/crafting_station_ui.tscn" id="2_h3bck"]
+[ext_resource type="Texture2D" uid="uid://bjvwcvfb46ltk" path="res://assets/sprites/Crafting Stations/Ult Pack Crafting Table.png" id="3_hhudp"]
+[ext_resource type="Script" uid="uid://dv3wrycrb3qr3" path="res://scripts/InventorySystem/crafting/CraftingComponent.gd" id="4_t2vlu"]
+[ext_resource type="Resource" uid="uid://psa32lmv5mhv" path="res://resources/Recipes/copper_axe_recipe.tres" id="5_p2tr0"]
+[ext_resource type="Resource" uid="uid://ckw5ng7ske6jt" path="res://resources/Recipes/copper_pickaxe_recipe.tres" id="6_xi00c"]
+[ext_resource type="Resource" uid="uid://cie6777xc5p3p" path="res://resources/Items/Equipment/stone_axe.tres" id="7_v8bpg"]
+[ext_resource type="Resource" uid="uid://b33an8vy6f077" path="res://resources/Items/Equipment/stone_pickaxe.tres" id="8_jc1fl"]
+[ext_resource type="Resource" uid="uid://clodeaw1tvdbf" path="res://resources/Recipes/copper_boots.tres" id="9_hhudp"]
+[ext_resource type="Resource" uid="uid://daxc2c1226uk0" path="res://resources/Items/Equipment/stone_sword.tres" id="9_r4ns5"]
+[ext_resource type="Resource" uid="uid://cyut2mwvw7goi" path="res://resources/Recipes/copper_sword_recipe.tres" id="9_t2vlu"]
+[ext_resource type="Resource" uid="uid://dtttp8sfgw11d" path="res://resources/Recipes/stick_recipe.tres" id="9_w7app"]
+[ext_resource type="Resource" uid="uid://c7daq43wtlvad" path="res://resources/Recipes/stick_2_recipe.tres" id="10_r4ns5"]
+[ext_resource type="Resource" uid="uid://58ygyyfufk82" path="res://resources/Recipes/copper_chestplate.tres" id="10_t2vlu"]
+[ext_resource type="Resource" uid="uid://dp604ebuishcp" path="res://resources/Recipes/copper_gauntlets.tres" id="11_p2tr0"]
+[ext_resource type="Resource" uid="uid://cuj1leb8o8clp" path="res://resources/Recipes/copper_helmet.tres" id="12_xi00c"]
+[ext_resource type="AudioStream" uid="uid://dlnvrefau1i7s" path="res://assets/sounds/sound effects/crafting_table_sound.mp3" id="17_jc1fl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(26, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc1fl"]
+size = Vector2(28, 21)
+
+[node name="CraftingTable" type="StaticBody2D" unique_id=634170030 node_paths=PackedStringArray("crafting_component")]
+z_index = 2
+y_sort_enabled = true
+collision_layer = 2048
+collision_mask = 6147
+script = ExtResource("1_bt8de")
+crafting_component = NodePath("CraftingComponent")
+crafting_ui_scene = ExtResource("2_h3bck")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1957524016]
+shape = SubResource("RectangleShape2D_body")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2105598341]
+position = Vector2(0, -6)
+texture = ExtResource("3_hhudp")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1387356670]
+position = Vector2(0, -6)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1679959153]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_jc1fl")
+
+[node name="HintLabel" type="Label" parent="." unique_id=824959691]
+visible = false
+z_index = 2
+offset_left = -60.0
+offset_top = -36.0
+offset_right = 60.0
+offset_bottom = -20.0
+text = "[F]"
+horizontal_alignment = 1
+
+[node name="CraftingComponent" type="Node" parent="." unique_id=965657191]
+script = ExtResource("4_t2vlu")
+recipes = Array[Resource]([ExtResource("9_w7app"), ExtResource("10_r4ns5"), ExtResource("7_v8bpg"), ExtResource("8_jc1fl"), ExtResource("9_r4ns5"), ExtResource("5_p2tr0"), ExtResource("6_xi00c"), ExtResource("9_t2vlu"), ExtResource("9_hhudp"), ExtResource("10_t2vlu"), ExtResource("11_p2tr0"), ExtResource("12_xi00c")])
+
+[node name="CraftingTablePlayer" type="AudioStreamPlayer2D" parent="." unique_id=106352699]
+stream = ExtResource("17_jc1fl")
+bus = &"SFX"

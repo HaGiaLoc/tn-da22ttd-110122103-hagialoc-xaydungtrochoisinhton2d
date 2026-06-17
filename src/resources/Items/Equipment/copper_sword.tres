@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://rduv0wxw285o"]
+
+[ext_resource type="Texture2D" uid="uid://drl0pqeplxcol" path="res://assets/sprites/Copper Sword.png" id="1_2vth4"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_ylets"]
+
+[resource]
+script = ExtResource("2_ylets")
+id = "copper_sword"
+name = "Kiếm đồng"
+description = "Thank kiếm được làm từ đồng, gây sát thương khá đáng kể cho đa số sinh vật.
++ 15 Sát thương"
+icon = ExtResource("1_2vth4")
+item_type = 2
+base_value = 3
+slot_type = 5
+damage = 15
+attack_speed = 1.0

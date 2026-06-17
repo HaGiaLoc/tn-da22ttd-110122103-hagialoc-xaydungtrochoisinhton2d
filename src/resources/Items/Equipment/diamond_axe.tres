@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://dhuyfspfiqgms"]
+
+[ext_resource type="Texture2D" uid="uid://c8kjqg5yo75vh" path="res://assets/sprites/Diamond Axe.png" id="1_5lu7c"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_mwynx"]
+
+[resource]
+script = ExtResource("2_mwynx")
+id = "diamond_axe"
+name = "Rìu Kim Cương"
+description = "Rìu làm từ kim cương, dùng để chặt cây.
++ 5 Hiệu suất khai thác"
+icon = ExtResource("1_5lu7c")
+item_type = 2
+base_value = 4
+slot_type = 6
+mining_efficiency = 5.0

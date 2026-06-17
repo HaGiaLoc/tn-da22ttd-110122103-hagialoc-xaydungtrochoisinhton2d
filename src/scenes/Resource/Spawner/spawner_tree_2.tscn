@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://km8q4v0jwkof"]
+
+[ext_resource type="Script" uid="uid://bxbjov506rsqg" path="res://scripts/Resource/ResourceSpawner.gd" id="1_rs"]
+[ext_resource type="PackedScene" uid="uid://bgqaejlbaw1qh" path="res://scenes/Resource/Node/tree_2.tscn" id="2_scene"]
+
+[node name="SpawnerTree2" type="Node2D" unique_id=2036718692]
+y_sort_enabled = true
+script = ExtResource("1_rs")
+resource_scene = ExtResource("2_scene")
+respawn_time = 120.0

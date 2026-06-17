@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="LootTable" format=3 uid="uid://d2qvs2nspbmt1"]
+
+[ext_resource type="Script" uid="uid://06l8l7mfajeq" path="res://scripts/InventorySystem/loot/LootTable.gd" id="1_hb2x1"]
+[ext_resource type="Script" uid="uid://br7vna1vjxrf6" path="res://scripts/InventorySystem/loot/LootEntry.gd" id="1_pdt8i"]
+
+[sub_resource type="Resource" id="Resource_kxdns"]
+script = ExtResource("1_pdt8i")
+item_id = "raw_meat"
+quantity_min = 3
+quantity_max = 5
+metadata/_custom_type_script = "uid://br7vna1vjxrf6"
+
+[sub_resource type="Resource" id="Resource_7ov0r"]
+script = ExtResource("1_pdt8i")
+item_id = "leather"
+quantity_max = 3
+metadata/_custom_type_script = "uid://br7vna1vjxrf6"
+
+[resource]
+script = ExtResource("1_hb2x1")
+entries = Array[Resource]([SubResource("Resource_kxdns"), SubResource("Resource_7ov0r")])
+metadata/_custom_type_script = "uid://06l8l7mfajeq"

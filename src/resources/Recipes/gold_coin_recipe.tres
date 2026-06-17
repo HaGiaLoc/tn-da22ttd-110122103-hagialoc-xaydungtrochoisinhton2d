@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://2nvcx1h5kqur"]
+
+[ext_resource type="Script" uid="uid://coc1fuqd7wjwe" path="res://scripts/InventorySystem/crafting/CraftIngredient.gd" id="1_2tj7j"]
+[ext_resource type="Script" uid="uid://besc6jij5upui" path="res://scripts/InventorySystem/crafting/CraftingRecipe.gd" id="2_uusr6"]
+
+[sub_resource type="Resource" id="Resource_x6dh3"]
+script = ExtResource("1_2tj7j")
+item_id = "gold_ore"
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[resource]
+script = ExtResource("2_uusr6")
+result_item_id = "gold_coin"
+result_quantity = 5
+ingredients = Array[Resource]([SubResource("Resource_x6dh3")])
+metadata/_custom_type_script = "uid://besc6jij5upui"

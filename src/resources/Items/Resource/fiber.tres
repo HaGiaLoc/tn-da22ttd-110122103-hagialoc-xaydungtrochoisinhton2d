@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://cfscnbpyytsco"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_itembase"]
+[ext_resource type="Texture2D" uid="uid://ddqhw2xqluxwk" path="res://assets/sprites/Materials/Ult Pack Materials Wool.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_itembase")
+id = "fiber"
+name = "Sợi Cỏ"
+description = "Sợi thu thập từ bụi cỏ. Dùng để chế tạo dây thừng."
+icon = ExtResource("2_icon")
+stackable = true
+max_stacks = 99

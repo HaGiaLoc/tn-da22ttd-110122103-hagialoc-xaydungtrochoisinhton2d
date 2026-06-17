@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://clgha72lp8esw"]
+
+[ext_resource type="Script" uid="uid://coc1fuqd7wjwe" path="res://scripts/InventorySystem/crafting/CraftIngredient.gd" id="1_5sct1"]
+[ext_resource type="Script" uid="uid://besc6jij5upui" path="res://scripts/InventorySystem/crafting/CraftingRecipe.gd" id="2_0apq6"]
+
+[sub_resource type="Resource" id="Resource_7seu8"]
+script = ExtResource("1_5sct1")
+item_id = "gold"
+quantity = 5
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[resource]
+script = ExtResource("2_0apq6")
+result_item_id = "gold_helmet"
+ingredients = Array[Resource]([SubResource("Resource_7seu8")])
+metadata/_custom_type_script = "uid://besc6jij5upui"

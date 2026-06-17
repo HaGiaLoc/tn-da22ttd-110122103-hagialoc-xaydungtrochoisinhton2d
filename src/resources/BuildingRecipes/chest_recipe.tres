@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="BuildingRecipe" format=3 uid="uid://dctujtj32dmww"]
+
+[ext_resource type="Texture2D" uid="uid://dttbn2o2at3sk" path="res://assets/sprites/Chest/Ult Pack Chest normal.png" id="1_y2n8x"]
+[ext_resource type="Script" uid="uid://dgc5ahm54u2hk" path="res://scripts/InventorySystem/building/BuildIngredient.gd" id="2_5kb8d"]
+[ext_resource type="Script" uid="uid://bp6ueoekj32cp" path="res://scripts/InventorySystem/building/BuildingRecipe.gd" id="3_diaii"]
+
+[sub_resource type="Resource" id="Resource_ing1"]
+script = ExtResource("2_5kb8d")
+item_id = "rope"
+
+[sub_resource type="Resource" id="Resource_ing2"]
+script = ExtResource("2_5kb8d")
+item_id = "wood"
+quantity = 2
+
+[resource]
+script = ExtResource("3_diaii")
+display_name = "Rương"
+icon = ExtResource("1_y2n8x")
+building_scene = "uid://b0eno37gwx5k4"
+ingredients = Array[Resource]([SubResource("Resource_ing1"), SubResource("Resource_ing2")])

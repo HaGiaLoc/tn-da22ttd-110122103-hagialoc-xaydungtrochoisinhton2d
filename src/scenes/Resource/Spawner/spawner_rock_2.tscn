@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ic5gk5y5t6mb"]
+
+[ext_resource type="Script" uid="uid://bxbjov506rsqg" path="res://scripts/Resource/ResourceSpawner.gd" id="1_rs"]
+[ext_resource type="PackedScene" uid="uid://dj05od8qqqe1r" path="res://scenes/Resource/Node/rock_2.tscn" id="2_scene"]
+
+[node name="SpawnerRock2" type="Node2D" unique_id=1439819792]
+script = ExtResource("1_rs")
+resource_scene = ExtResource("2_scene")
+respawn_time = 180.0

@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://c4mfw0r220jyp"]
+
+[ext_resource type="Script" uid="uid://dh7kxwajgxpyd" path="res://scripts/InventorySystem/equipment/EquipmentModel.gd" id="1_6kmvk"]
+[ext_resource type="PackedScene" uid="uid://bav6gkmiqpdxd" path="res://scenes/InventorySystem/equipment_slot.tscn" id="2_7lanh"]
+[ext_resource type="Texture2D" uid="uid://cssvxxduqmvpb" path="res://assets/sprites/Copper Helmet.png" id="3_hmu4h"]
+[ext_resource type="Texture2D" uid="uid://flyq0q6tllvx" path="res://assets/sprites/Icon190.png" id="4_rkvk3"]
+[ext_resource type="Texture2D" uid="uid://cl1ywoflrn37v" path="res://assets/sprites/Icon210.png" id="5_ggg53"]
+[ext_resource type="Texture2D" uid="uid://b8a7ce5f1mwjg" path="res://assets/sprites/Icon230.png" id="6_mrtkd"]
+[ext_resource type="Texture2D" uid="uid://clfh2ujijou4j" path="res://assets/sprites/Icon295.png" id="7_hmu4h"]
+[ext_resource type="Texture2D" uid="uid://c7plurelx0nc1" path="res://assets/sprites/Icon292.png" id="8_gpypm"]
+[ext_resource type="Texture2D" uid="uid://dekmnt3xix3" path="res://assets/sprites/Icon143.png" id="9_k105v"]
+[ext_resource type="Texture2D" uid="uid://ci0bmup4eiynm" path="res://assets/sprites/Icon3.png" id="10_rkvk3"]
+[ext_resource type="AudioStream" uid="uid://bnod43qcf4l16" path="res://assets/sounds/sound effects/equip_item.mp3" id="11_rkvk3"]
+
+[node name="PlayerEquipment" type="PanelContainer" unique_id=688848569 node_paths=PackedStringArray("slots") groups=["PlayerEquipment"]]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -455.0
+offset_top = 245.0
+offset_right = -322.0
+offset_bottom = 462.0
+grow_horizontal = 0
+script = ExtResource("1_6kmvk")
+slots = {
+1: NodePath("MarginContainer/Control/VBoxContainer/Head"),
+2: NodePath("MarginContainer/Control/VBoxContainer/Chest"),
+3: NodePath("MarginContainer/Control/VBoxContainer/Gauntlet"),
+4: NodePath("MarginContainer/Control/VBoxContainer/Feet"),
+5: NodePath("MarginContainer/Control/VBoxContainer2/Weapon"),
+6: NodePath("MarginContainer/Control/VBoxContainer2/Axe"),
+7: NodePath("MarginContainer/Control/VBoxContainer2/Pickaxe"),
+8: NodePath("MarginContainer/Control/VBoxContainer2/Shield")
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2124679657]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Control" type="Control" parent="MarginContainer" unique_id=704531053]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control" unique_id=641455412]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 34.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Head" parent="MarginContainer/Control/VBoxContainer" unique_id=1265650927 instance=ExtResource("2_7lanh")]
+layout_mode = 2
+slot_type = 1
+placeholder_icon = ExtResource("3_hmu4h")
+
+[node name="Chest" parent="MarginContainer/Control/VBoxContainer" unique_id=1447387392 instance=ExtResource("2_7lanh")]
+layout_mode = 2
+slot_type = 2
+placeholder_icon = ExtResource("4_rkvk3")
+
+[node name="Gauntlet" parent="MarginContainer/Control/VBoxContainer" unique_id=686510254 instance=ExtResource("2_7lanh")]
+layout_mode = 2
+slot_type = 3
+placeholder_icon = ExtResource("5_ggg53")
+
+[node name="Feet" parent="MarginContainer/Control/VBoxContainer" unique_id=1133522606 instance=ExtResource("2_7lanh")]
+layout_mode = 2
+slot_type = 4
+placeholder_icon = ExtResource("6_mrtkd")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/Control" unique_id=692880023]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -34.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Axe" parent="MarginContainer/Control/VBoxContainer2" unique_id=1146142905 instance=ExtResource("2_7lanh")]
+layout_mode = 2
+slot_type = 6
+placeholder_icon = ExtResource("7_hmu4h")
+
+[node name="Pickaxe" parent="MarginContainer/Control/VBoxContainer2" unique_id=1644457871 instance=ExtResource("2_7lanh")]
+layout_mode = 2
+slot_type = 7
+placeholder_icon = ExtResource("8_gpypm")
+
+[node name="Weapon" parent="MarginContainer/Control/VBoxContainer2" unique_id=1528026675 instance=ExtResource("2_7lanh")]
+layout_mode = 2
+slot_type = 5
+placeholder_icon = ExtResource("10_rkvk3")
+
+[node name="Shield" parent="MarginContainer/Control/VBoxContainer2" unique_id=1835509246 instance=ExtResource("2_7lanh")]
+layout_mode = 2
+slot_type = 8
+placeholder_icon = ExtResource("9_k105v")
+
+[node name="EquipPlayer" type="AudioStreamPlayer" parent="." unique_id=218535805]
+stream = ExtResource("11_rkvk3")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://ibf6mig1nukd"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_itembase"]
+[ext_resource type="Texture2D" uid="uid://bjl6gwdq4f2xm" path="res://assets/sprites/Copper Pickaxe.png" id="1_kbyrp"]
+
+[resource]
+script = ExtResource("1_itembase")
+id = "copper_pickaxe"
+name = "Cuốc Đồng"
+description = "Cuốc làm từ đá, dùng để khai thác đá và quặng.
++ 3 Hiệu suất khai thác"
+icon = ExtResource("1_kbyrp")
+item_type = 2
+base_value = 4
+slot_type = 7
+mining_efficiency = 3.0

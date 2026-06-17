@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bhfsbdt28weot"]
+
+[ext_resource type="Texture2D" uid="uid://b0fl2ssy7bdpx" path="res://assets/sprites/Gold Ingot.png" id="1_jccyc"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_4er5p"]
+
+[resource]
+script = ExtResource("2_4er5p")
+id = "gold_ingot"
+name = "Thỏi vàng"
+description = "Thỏi vàng được tinh luyện từ quặn vàng. Dùng để chế tạo công cụ bằng vàng."
+icon = ExtResource("1_jccyc")
+stackable = true
+max_stacks = 99
+base_value = 8

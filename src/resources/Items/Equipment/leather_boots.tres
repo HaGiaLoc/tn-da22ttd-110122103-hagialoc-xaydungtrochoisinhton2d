@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bwdhnnxmql37v"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_hjfhh"]
+[ext_resource type="Texture2D" uid="uid://c0aons8h3yti5" path="res://assets/sprites/Leather Boots.png" id="1_tf858"]
+
+[resource]
+script = ExtResource("1_hjfhh")
+id = "leather_boots"
+name = "Giày da"
+description = "Giáp chân làm từ da thú.
++ 0.1 giáp"
+icon = ExtResource("1_tf858")
+item_type = 2
+base_value = 6
+slot_type = 4
+armor = 1

@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bvwoupyoii6d"]
+
+[ext_resource type="Script" uid="uid://ub7dieb1ti1m" path="res://scripts/Building/CraftingTable.gd" id="1_85plp"]
+[ext_resource type="PackedScene" uid="uid://c4w7686hf5jv1" path="res://scenes/InventorySystem/crafting_station_ui.tscn" id="2_8j2i6"]
+[ext_resource type="Texture2D" uid="uid://bw6liwsd4raby" path="res://assets/sprites/Crafting Stations/Ult Pack Anvil.png" id="3_85plp"]
+[ext_resource type="Script" uid="uid://dv3wrycrb3qr3" path="res://scripts/InventorySystem/crafting/CraftingComponent.gd" id="4_vek87"]
+[ext_resource type="Resource" uid="uid://psa32lmv5mhv" path="res://resources/Recipes/copper_axe_recipe.tres" id="5_x61fo"]
+[ext_resource type="Resource" uid="uid://ckw5ng7ske6jt" path="res://resources/Recipes/copper_pickaxe_recipe.tres" id="6_dxnoc"]
+[ext_resource type="Resource" uid="uid://3ymdm373b4ga" path="res://resources/Recipes/diamond_axe_recipe.tres" id="7_85plp"]
+[ext_resource type="Resource" uid="uid://c5thg5oxrnyt0" path="res://resources/Recipes/diamond_pickaxe_recipe.tres" id="8_8j2i6"]
+[ext_resource type="Resource" uid="uid://cyut2mwvw7goi" path="res://resources/Recipes/copper_sword_recipe.tres" id="9_qqp1n"]
+[ext_resource type="Resource" uid="uid://clodeaw1tvdbf" path="res://resources/Recipes/copper_boots.tres" id="9_urcm3"]
+[ext_resource type="Resource" uid="uid://58ygyyfufk82" path="res://resources/Recipes/copper_chestplate.tres" id="10_an07m"]
+[ext_resource type="Resource" uid="uid://cmd3scsqxne5c" path="res://resources/Recipes/gold_sword_recipe.tres" id="10_gsjtm"]
+[ext_resource type="Resource" uid="uid://dp604ebuishcp" path="res://resources/Recipes/copper_gauntlets.tres" id="11_fnnw1"]
+[ext_resource type="Resource" uid="uid://c35ly3vm6vfe2" path="res://resources/Recipes/diamond_sword_recipe.tres" id="11_xsm88"]
+[ext_resource type="Resource" uid="uid://cuj1leb8o8clp" path="res://resources/Recipes/copper_helmet.tres" id="12_qqp1n"]
+[ext_resource type="Resource" uid="uid://dwff8ck4b0cj2" path="res://resources/Recipes/diamond_boots.tres" id="13_gsjtm"]
+[ext_resource type="Resource" uid="uid://dvdagbw6wbgoc" path="res://resources/Recipes/diamond_chestplate.tres" id="14_xsm88"]
+[ext_resource type="Resource" uid="uid://lw6lfhtvaaou" path="res://resources/Recipes/diamond_gauntlets.tres" id="15_t4yan"]
+[ext_resource type="Resource" uid="uid://gl7bx04thy35" path="res://resources/Recipes/diamond_helmet.tres" id="16_8n853"]
+[ext_resource type="Resource" uid="uid://dx8mj45dn68ma" path="res://resources/Recipes/gold_boots.tres" id="17_qy6tm"]
+[ext_resource type="Resource" uid="uid://7yx6jxp5vbk" path="res://resources/Recipes/gold_chestplate.tres" id="18_kbue5"]
+[ext_resource type="Resource" uid="uid://cvh2tbusfphsf" path="res://resources/Recipes/gold_gauntlets.tres" id="19_2y7d2"]
+[ext_resource type="Resource" uid="uid://clgha72lp8esw" path="res://resources/Recipes/gold_helmet.tres" id="20_nlmf5"]
+[ext_resource type="AudioStream" uid="uid://brtux2s8m6p01" path="res://assets/sounds/sound effects/anvil_sound.mp3" id="24_gsjtm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(30, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsjtm"]
+size = Vector2(25, 32)
+
+[node name="Anvil" type="StaticBody2D" unique_id=634170030 node_paths=PackedStringArray("crafting_component")]
+z_index = 2
+y_sort_enabled = true
+collision_layer = 2048
+collision_mask = 6147
+script = ExtResource("1_85plp")
+crafting_component = NodePath("CraftingComponent")
+crafting_ui_scene = ExtResource("2_8j2i6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1957524016]
+shape = SubResource("RectangleShape2D_body")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2105598341]
+position = Vector2(0, -7)
+texture = ExtResource("3_85plp")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1387356670]
+position = Vector2(0, -7)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1679959153]
+position = Vector2(1.1920929e-07, 0.49999952)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_gsjtm")
+
+[node name="HintLabel" type="Label" parent="." unique_id=824959691]
+visible = false
+z_index = 2
+offset_left = -60.0
+offset_top = -36.0
+offset_right = 60.0
+offset_bottom = -20.0
+text = "[F]"
+horizontal_alignment = 1
+
+[node name="CraftingComponent" type="Node" parent="." unique_id=965657191]
+script = ExtResource("4_vek87")
+recipes = Array[Resource]([ExtResource("5_x61fo"), ExtResource("6_dxnoc"), ExtResource("7_85plp"), ExtResource("8_8j2i6"), ExtResource("9_qqp1n"), ExtResource("10_gsjtm"), ExtResource("11_xsm88"), ExtResource("9_urcm3"), ExtResource("10_an07m"), ExtResource("11_fnnw1"), ExtResource("12_qqp1n"), ExtResource("13_gsjtm"), ExtResource("14_xsm88"), ExtResource("15_t4yan"), ExtResource("16_8n853"), ExtResource("17_qy6tm"), ExtResource("18_kbue5"), ExtResource("19_2y7d2"), ExtResource("20_nlmf5")])
+
+[node name="AnvilPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1570384959]
+stream = ExtResource("24_gsjtm")
+bus = &"SFX"

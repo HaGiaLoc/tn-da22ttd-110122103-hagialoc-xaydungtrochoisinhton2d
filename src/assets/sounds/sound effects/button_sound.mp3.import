@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dl5i10qbl8m2s"
+path="res://.godot/imported/button_sound.mp3-a47ae002878a9a7c400c56bcbeaf3cc3.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/sound effects/button_sound.mp3"
+dest_files=["res://.godot/imported/button_sound.mp3-a47ae002878a9a7c400c56bcbeaf3cc3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

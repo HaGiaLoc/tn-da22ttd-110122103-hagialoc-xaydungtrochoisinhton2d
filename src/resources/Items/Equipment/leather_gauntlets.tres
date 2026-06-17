@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://ciwfgjy7ujiby"]
+
+[ext_resource type="Texture2D" uid="uid://b0h8jmrg88b2i" path="res://assets/sprites/Leather Gauntlet.png" id="1_fi5nk"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_aivpj"]
+
+[resource]
+script = ExtResource("2_aivpj")
+id = "leather_gauntlets"
+name = "Găng tay da"
+description = "Giáp tay làm từ da thú.
++ 0.2 giáp"
+icon = ExtResource("1_fi5nk")
+item_type = 2
+base_value = 6
+slot_type = 3
+armor = 2

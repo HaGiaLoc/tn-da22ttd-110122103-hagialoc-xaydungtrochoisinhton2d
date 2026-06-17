@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://d0g1inadejrvv"]
+
+[ext_resource type="Script" uid="uid://0spc2d2y4s5k" path="res://scripts/InventorySystem/building/BuildingInventory.gd" id="1_building"]
+[ext_resource type="Script" uid="uid://bup15sqce44bf" path="res://scripts/InventorySystem/building/BuildingComponent.gd" id="2_component"]
+
+[node name="BuildingMenu" type="PanelContainer" unique_id=700000001 node_paths=PackedStringArray("recipe_list")]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -193.0
+offset_right = 260.0
+offset_bottom = 193.0
+grow_vertical = 2
+script = ExtResource("1_building")
+recipe_list = NodePath("MarginContainer/VBoxContainer/RecipeListWrapper/RecipeList")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=700000002]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=700000003]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=700000004]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Xây dựng"
+horizontal_alignment = 1
+
+[node name="RecipeListWrapper" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=700000005]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RecipeList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/RecipeListWrapper" unique_id=700000006]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/RecipeListWrapper" unique_id=700000007]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BuildingComponent" type="Node" parent="." unique_id=700000008]
+script = ExtResource("2_component")

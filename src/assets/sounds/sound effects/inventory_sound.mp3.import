@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://odgywsmmnap6"
+path="res://.godot/imported/inventory_sound.mp3-1a6ba5933a3c34e12f75cc969fb9292d.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/sound effects/inventory_sound.mp3"
+dest_files=["res://.godot/imported/inventory_sound.mp3-1a6ba5933a3c34e12f75cc969fb9292d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

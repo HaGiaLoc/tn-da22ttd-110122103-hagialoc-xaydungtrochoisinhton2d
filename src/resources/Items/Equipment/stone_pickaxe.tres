@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://b33an8vy6f077"]
+
+[ext_resource type="Texture2D" uid="uid://d4cku1rkh8q7e" path="res://assets/sprites/Stone Pickaxe.png" id="1_5i0rq"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_itembase"]
+
+[resource]
+script = ExtResource("1_itembase")
+id = "stone_pickaxe"
+name = "Cuốc Đá"
+description = "Cuốc làm từ đá, dùng để khai thác đá và quặng.
++ 1 Hiệu suất khai thác"
+icon = ExtResource("1_5i0rq")
+item_type = 2
+base_value = 4
+slot_type = 7
+mining_efficiency = 1.0

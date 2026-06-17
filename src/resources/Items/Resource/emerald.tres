@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bmq30bvl3538q"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_itembase"]
+[ext_resource type="Texture2D" uid="uid://ms07j5kxqarx" path="res://assets/sprites/Materials/Ult Pack Materials Emerald.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_itembase")
+id = "emerald"
+name = "Ngọc Lục Bảo"
+description = "Đá quý màu xanh lá. Dùng để chế tạo trang bị cao cấp."
+icon = ExtResource("2_icon")
+stackable = true
+max_stacks = 99
+base_value = 15

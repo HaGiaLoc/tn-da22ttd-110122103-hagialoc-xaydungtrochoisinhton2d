@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://4ogdwf4hdr1"]
+
+[ext_resource type="Script" uid="uid://bxbjov506rsqg" path="res://scripts/Resource/ResourceSpawner.gd" id="1_rs"]
+[ext_resource type="PackedScene" uid="uid://ci6gnmp26g0ta" path="res://scenes/Resource/Node/ore_copper.tscn" id="2_scene"]
+
+[node name="SpawnerOreCopper" type="Node2D" unique_id=560078771]
+script = ExtResource("1_rs")
+resource_scene = ExtResource("2_scene")
+respawn_time = 240.0

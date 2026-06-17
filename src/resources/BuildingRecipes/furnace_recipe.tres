@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BuildingRecipe" format=3 uid="uid://djnpnmgb1ml83"]
+
+[ext_resource type="Texture2D" uid="uid://bsl112aucbovi" path="res://assets/sprites/Furnace/Ult Pack Furnace Off.png" id="1_73dnf"]
+[ext_resource type="Script" uid="uid://dgc5ahm54u2hk" path="res://scripts/InventorySystem/building/BuildIngredient.gd" id="2_jx67w"]
+[ext_resource type="Script" uid="uid://bp6ueoekj32cp" path="res://scripts/InventorySystem/building/BuildingRecipe.gd" id="3_1gq2n"]
+
+[sub_resource type="Resource" id="Resource_ing2"]
+script = ExtResource("2_jx67w")
+item_id = "stone"
+quantity = 20
+
+[resource]
+script = ExtResource("3_1gq2n")
+display_name = "Lò Nung"
+icon = ExtResource("1_73dnf")
+building_scene = "uid://64qqwsqw7ika"
+ingredients = Array[Resource]([SubResource("Resource_ing2")])

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://cmd3scsqxne5c"]
+
+[ext_resource type="Script" uid="uid://coc1fuqd7wjwe" path="res://scripts/InventorySystem/crafting/CraftIngredient.gd" id="1_68u78"]
+[ext_resource type="Script" uid="uid://besc6jij5upui" path="res://scripts/InventorySystem/crafting/CraftingRecipe.gd" id="2_w4gc8"]
+
+[sub_resource type="Resource" id="Resource_agk5p"]
+script = ExtResource("1_68u78")
+item_id = "stick"
+quantity = 2
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[sub_resource type="Resource" id="Resource_hn3jw"]
+script = ExtResource("1_68u78")
+item_id = "rope"
+quantity = 3
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[sub_resource type="Resource" id="Resource_sl56q"]
+script = ExtResource("1_68u78")
+item_id = "gold"
+quantity = 2
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[resource]
+script = ExtResource("2_w4gc8")
+result_item_id = "gold_sword"
+ingredients = Array[Resource]([SubResource("Resource_agk5p"), SubResource("Resource_hn3jw"), SubResource("Resource_sl56q")])
+metadata/_custom_type_script = "uid://besc6jij5upui"

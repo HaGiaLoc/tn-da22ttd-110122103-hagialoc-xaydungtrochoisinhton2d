@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dqaccnkrmwbt4"]
+
+[ext_resource type="Script" uid="uid://cpjkn6c35sril" path="res://scripts/Resource/ResourceNode.gd" id="1_rn"]
+[ext_resource type="Texture2D" uid="uid://b7xgybd2mhsqu" path="res://assets/sprites/Trees&foliage/Ult Pack Foliage 1.png" id="2_b1"]
+[ext_resource type="Resource" uid="uid://hvplchnjihbd" path="res://resources/Loot Tables/Resource/bush_loot_table.tres" id="3_lt"]
+[ext_resource type="AudioStream" uid="uid://dg63oom03210x" path="res://assets/sounds/sound effects/harvest_bush.mp3" id="4_nnjpi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(24, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
+radius = 16.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtpf6"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnjpi"]
+bg_color = Color(1, 1, 0, 0.49803922)
+
+[node name="Bush1" type="StaticBody2D" unique_id=1736571021]
+collision_layer = 4096
+collision_mask = 2048
+script = ExtResource("1_rn")
+harvest_time = 0.3
+harvest_count = 1
+loot_table = ExtResource("3_lt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1630244259]
+texture = ExtResource("2_b1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=290715998]
+shape = SubResource("RectangleShape2D_body")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=41760142]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1996997423]
+shape = SubResource("CircleShape2D_interact")
+
+[node name="HintLabel" type="Label" parent="." unique_id=1107579842]
+visible = false
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -43.0
+offset_right = 50.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[F]"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1722681384]
+visible = false
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -20.0
+offset_right = 32.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_dtpf6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nnjpi")
+max_value = 1.0
+show_percentage = false
+
+[node name="HarvestPlayer" type="AudioStreamPlayer2D" parent="." unique_id=195003571]
+stream = ExtResource("4_nnjpi")

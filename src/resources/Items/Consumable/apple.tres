@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bs5bu1vd6rfn1"]
+
+[ext_resource type="Texture2D" uid="uid://bxmpjc4upug88" path="res://assets/sprites/Food/Ult Pack Food Apple.png" id="1_wyla6"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_8o3mi"]
+
+[resource]
+script = ExtResource("2_8o3mi")
+id = "apple"
+name = "Táo"
+description = "Quả táo rơi ra từ cây.
++ 10 điểm Đói"
+icon = ExtResource("1_wyla6")
+item_type = 1
+stackable = true
+max_stacks = 99
+restore_health = 5
+restore_hunger = 15
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

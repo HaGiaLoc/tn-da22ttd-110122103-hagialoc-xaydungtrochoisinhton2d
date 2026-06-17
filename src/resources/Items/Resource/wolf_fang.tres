@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://b57qu564hep1g"]
+
+[ext_resource type="Texture2D" uid="uid://cxw8o6phwl0ai" path="res://assets/sprites/Fang.png" id="1_3ewew"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_gdyyc"]
+
+[resource]
+script = ExtResource("1_gdyyc")
+id = "wolf_fang"
+name = "Nanh Sói"
+description = "Nanh sói rơi ra từ sói hoang. Có công dụng đặc biệt."
+icon = ExtResource("1_3ewew")
+stackable = true
+max_stacks = 10
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

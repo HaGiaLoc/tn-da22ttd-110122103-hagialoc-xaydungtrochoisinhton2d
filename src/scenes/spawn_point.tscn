@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bhjx2poxvks30"]
+
+[ext_resource type="Script" uid="uid://mvuf3ydyhrds" path="res://scripts/spawn_point.gd" id="1_spwnpt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xc8in"]
+radius = 300.0
+
+[node name="Spawn Point" type="Node2D" unique_id=1282961999]
+script = ExtResource("1_spwnpt")
+
+[node name="Spawn Timer" type="Timer" parent="." unique_id=579971254]
+
+[node name="Spawn Area" type="Marker2D" parent="." unique_id=803575563]
+
+[node name="PatrolArea" type="Area2D" parent="." unique_id=1463414594]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatrolArea" unique_id=527002734]
+shape = SubResource("CircleShape2D_xc8in")

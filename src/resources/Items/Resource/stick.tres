@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bkqgvyoj0ck8x"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_1fwfw"]
+[ext_resource type="Texture2D" uid="uid://niox1asv4xl2" path="res://assets/sprites/Stick.png" id="1_celr7"]
+
+[resource]
+script = ExtResource("1_1fwfw")
+id = "stick"
+name = "Que gỗ"
+description = "Que gỗ chế tạo từ gỗ. Nguyên liệu chế tạo cơ bản."
+icon = ExtResource("1_celr7")
+stackable = true
+max_stacks = 99
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

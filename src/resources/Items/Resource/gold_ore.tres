@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bo13j6e5vrx6s"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_itembase"]
+[ext_resource type="Texture2D" uid="uid://c1nj6emiu3gf8" path="res://assets/sprites/Materials/Ult Pack Materials Gold Ore.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_itembase")
+id = "gold_ore"
+name = "Quặng Vàng"
+description = "Quặng vàng quý hiếm. Dùng để chế tạo đồng vàng và thỏi vàng."
+icon = ExtResource("2_icon")
+stackable = true
+max_stacks = 99
+base_value = 8

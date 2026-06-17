@@ -1,0 +1,340 @@
+[gd_scene format=3 uid="uid://d3035lxelpyyu"]
+
+[ext_resource type="Script" uid="uid://b7d3ni1wslfp6" path="res://scripts/InventorySystem/Inventory.gd" id="1_ywcb3"]
+[ext_resource type="PackedScene" uid="uid://311c3yr7jclm" path="res://scenes/InventorySystem/player_inventory.tscn" id="2_4f5gg"]
+[ext_resource type="PackedScene" uid="uid://c4mfw0r220jyp" path="res://scenes/InventorySystem/player_equipment.tscn" id="3_ewhgc"]
+[ext_resource type="PackedScene" uid="uid://b02lgirne4y80" path="res://scenes/InventorySystem/crafting.tscn" id="6_ywcb3"]
+[ext_resource type="Script" uid="uid://db0bypb1udotq" path="res://scripts/InventorySystem/vendor/VendorComponent.gd" id="7_h6jp1"]
+[ext_resource type="Script" uid="uid://b8yskmhbe7ep0" path="res://scripts/InventorySystem/vendor/VendorItem.gd" id="8_pjiup"]
+[ext_resource type="Resource" uid="uid://cbna6pn0gma4t" path="res://resources/Items/Consumable/health_potion.tres" id="9_5470c"]
+[ext_resource type="Resource" uid="uid://rduv0wxw285o" path="res://resources/Items/Equipment/copper_sword.tres" id="10_5m22n"]
+[ext_resource type="Resource" uid="uid://bbawfkhwf1dbq" path="res://resources/Items/Equipment/leather_helmet.tres" id="11_66k23"]
+[ext_resource type="PackedScene" uid="uid://3c6j37ltfn1d" path="res://scenes/InventorySystem/quantity_selector.tscn" id="12_bko8w"]
+[ext_resource type="Resource" uid="uid://54eaqqo2ey7d" path="res://resources/Items/ring.tres" id="12_tu01l"]
+[ext_resource type="Script" uid="uid://dv3wrycrb3qr3" path="res://scripts/InventorySystem/crafting/CraftingComponent.gd" id="13_4f5gg"]
+[ext_resource type="Resource" uid="uid://daxae7julfa7k" path="res://resources/Recipes/stone_axe_recipe.tres" id="15_bgwix"]
+[ext_resource type="Resource" uid="uid://boe7u0nyosd8s" path="res://resources/Recipes/stone_pickaxe_recipe.tres" id="16_vrt07"]
+[ext_resource type="Resource" uid="uid://d0w5htdp0qk5o" path="res://resources/Recipes/rope.tres" id="17_1hs4a"]
+[ext_resource type="Resource" uid="uid://c7daq43wtlvad" path="res://resources/Recipes/stick_2_recipe.tres" id="18_vrt07"]
+[ext_resource type="Resource" uid="uid://rytq0dbdgbwc" path="res://resources/Recipes/stone_sword_recipe.tres" id="19_1hs4a"]
+[ext_resource type="Resource" uid="uid://cesp4e8pbqaac" path="res://resources/Recipes/leather_boots.tres" id="19_f6c3u"]
+[ext_resource type="PackedScene" uid="uid://d0g1inadejrvv" path="res://scenes/InventorySystem/building_menu.tscn" id="20_bldmenu"]
+[ext_resource type="Resource" uid="uid://crqbk01qb3mqg" path="res://resources/Recipes/leather_chestplate.tres" id="20_f3iou"]
+[ext_resource type="Resource" uid="uid://cl0iqiijjplte" path="res://resources/BuildingRecipes/crafting_table_recipe.tres" id="20_gqhsc"]
+[ext_resource type="Resource" uid="uid://cfbos3p117jp8" path="res://resources/Recipes/leather_gauntlets.tres" id="21_32ij4"]
+[ext_resource type="Script" uid="uid://bup15sqce44bf" path="res://scripts/InventorySystem/building/BuildingComponent.gd" id="21_bldcomp"]
+[ext_resource type="Resource" uid="uid://xysioc6o0p6b" path="res://resources/BuildingRecipes/anvil_recipe.tres" id="21_ukrik"]
+[ext_resource type="Resource" uid="uid://dctujtj32dmww" path="res://resources/BuildingRecipes/chest_recipe.tres" id="22_26gn5"]
+[ext_resource type="Resource" uid="uid://cc71vf4exam7x" path="res://resources/Recipes/leather_helmet.tres" id="22_dqndv"]
+[ext_resource type="Resource" uid="uid://bxqknyb3rijod" path="res://resources/Recipes/health_potion_recipe.tres" id="22_f3iou"]
+[ext_resource type="Resource" uid="uid://bepmwhwqvtjkx" path="res://resources/Recipes/greater_health_potion_recipe.tres" id="23_32ij4"]
+[ext_resource type="Resource" uid="uid://djnpnmgb1ml83" path="res://resources/BuildingRecipes/furnace_recipe.tres" id="23_f5ij0"]
+[ext_resource type="AudioStream" uid="uid://odgywsmmnap6" path="res://assets/sounds/sound effects/inventory_sound.mp3" id="30_32ij4"]
+
+[sub_resource type="Resource" id="Resource_xkpou"]
+script = ExtResource("8_pjiup")
+item_base = ExtResource("10_5m22n")
+roll_affixes = true
+gold_price = 5
+custom_item = ExtResource("9_5470c")
+metadata/_custom_type_script = "uid://bulvxxyy0pl5f"
+
+[sub_resource type="Resource" id="Resource_jli6g"]
+script = ExtResource("8_pjiup")
+item_base = ExtResource("11_66k23")
+roll_affixes = true
+gold_price = 12
+metadata/_custom_type_script = "uid://bulvxxyy0pl5f"
+
+[sub_resource type="Resource" id="Resource_rev1e"]
+script = ExtResource("8_pjiup")
+item_base = ExtResource("12_tu01l")
+roll_affixes = true
+gold_price = 7
+metadata/_custom_type_script = "uid://bulvxxyy0pl5f"
+
+[sub_resource type="Resource" id="Resource_voy08"]
+script = ExtResource("8_pjiup")
+item_base = ExtResource("9_5470c")
+quantity = 50
+gold_price = 2
+metadata/_custom_type_script = "uid://bulvxxyy0pl5f"
+
+[node name="Inventory" type="Control" unique_id=413271790 node_paths=PackedStringArray("item_id_field", "create_item_btn", "clear_btn", "stash_button", "npc1_button", "vendor1", "npc2_button", "crafting_component", "crafting_inventory", "building_button", "building_component", "building_inventory", "health_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ywcb3")
+item_id_field = NodePath("HBoxContainer/ItemIdField")
+create_item_btn = NodePath("HBoxContainer/CreateItemBtn")
+clear_btn = NodePath("ClearButton")
+stash_button = NodePath("StashButton")
+npc1_button = NodePath("NPCButton")
+vendor1 = NodePath("NPCButton/VendorComponent")
+npc2_button = NodePath("CraftingButton")
+crafting_component = NodePath("CraftingButton/CraftingComponent")
+crafting_inventory = NodePath("Crafting")
+building_button = NodePath("BuildingButton")
+building_component = NodePath("BuildingButton/BuildingComponent")
+building_inventory = NodePath("BuildingMenu")
+health_label = NodePath("PlayerStats/MarginContainer/VBoxContainer/Life/Value")
+
+[node name="DimOverlay" type="ColorRect" parent="." unique_id=1000000001]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.2509804)
+
+[node name="PlayerInventory" parent="." unique_id=1862775285 instance=ExtResource("2_4f5gg")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -202.0
+offset_bottom = 221.0
+
+[node name="PlayerEquipment" parent="." unique_id=2037063451 node_paths=PackedStringArray("slots") instance=ExtResource("3_ewhgc")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -115.0
+offset_bottom = 102.0
+grow_horizontal = 1
+slots = {
+1: null,
+2: null,
+3: null,
+4: null,
+5: null,
+6: null,
+7: null,
+8: null
+}
+
+[node name="Crafting" parent="." unique_id=621032004 instance=ExtResource("6_ywcb3")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+
+[node name="BuildingMenu" parent="." unique_id=800000001 instance=ExtResource("20_bldmenu")]
+layout_mode = 1
+anchors_preset = -1
+grow_vertical = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1317701788]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_right = 0.48400003
+offset_left = -131.56805
+offset_top = 7.0
+offset_right = 131.43195
+offset_bottom = 47.0
+
+[node name="ItemIdField" type="LineEdit" parent="HBoxContainer" unique_id=1001011859]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Item id"
+
+[node name="CreateItemBtn" type="Button" parent="HBoxContainer" unique_id=1381853915]
+layout_mode = 2
+disabled = true
+text = "Create Item"
+
+[node name="SearchDropdown" type="PanelContainer" parent="." unique_id=1317701799]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_right = 0.48400003
+offset_left = -131.56805
+offset_top = 48.0
+offset_right = 131.43195
+offset_bottom = 198.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SearchDropdown" unique_id=1317701800]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ResultList" type="VBoxContainer" parent="SearchDropdown/ScrollContainer" unique_id=1317701801]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerStats" type="PanelContainer" parent="." unique_id=1560207542]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = -181.0
+offset_right = 165.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PlayerStats" unique_id=1244755683]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerStats/MarginContainer" unique_id=1704950147]
+layout_mode = 2
+
+[node name="Life" type="HBoxContainer" parent="PlayerStats/MarginContainer/VBoxContainer" unique_id=1343532962]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PlayerStats/MarginContainer/VBoxContainer/Life" unique_id=1477510408]
+layout_mode = 2
+text = "Life: "
+
+[node name="Value" type="Label" parent="PlayerStats/MarginContainer/VBoxContainer/Life" unique_id=187296548]
+layout_mode = 2
+text = "0 / 0"
+
+[node name="Label2" type="Label" parent="." unique_id=1170721435]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -455.0
+offset_top = -148.0
+offset_right = -322.0
+offset_bottom = -108.0
+theme_override_font_sizes/font_size = 20
+text = "Trang Bị"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="." unique_id=2102678965]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -299.0
+offset_top = -231.0
+offset_right = -31.0
+offset_bottom = -191.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "Túi đồ"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="." unique_id=1883264217]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = -220.0
+offset_right = 165.0
+offset_bottom = -171.0
+text = "Chỉ số
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="StashButton" type="Button" parent="." unique_id=1298071649]
+visible = false
+layout_mode = 0
+offset_left = 413.0
+offset_top = 165.0
+offset_right = 464.0
+offset_bottom = 196.0
+text = "Stash"
+
+[node name="NPCButton" type="Button" parent="." unique_id=2096177605]
+visible = false
+layout_mode = 0
+offset_left = 413.0
+offset_top = 214.0
+offset_right = 467.0
+offset_bottom = 245.0
+text = "NPC 1"
+
+[node name="VendorComponent" type="Node" parent="NPCButton" unique_id=1651049149]
+script = ExtResource("7_h6jp1")
+items_for_sale = Array[Resource]([SubResource("Resource_xkpou"), SubResource("Resource_jli6g"), SubResource("Resource_rev1e"), SubResource("Resource_voy08")])
+
+[node name="CraftingButton" type="Button" parent="." unique_id=1584284865]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -455.0
+offset_top = 110.0
+offset_right = -373.0
+offset_bottom = 146.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Chế tạo"
+
+[node name="CraftingComponent" type="Node" parent="CraftingButton" unique_id=1424875561]
+script = ExtResource("13_4f5gg")
+recipes = Array[Resource]([ExtResource("18_vrt07"), ExtResource("17_1hs4a"), ExtResource("15_bgwix"), ExtResource("16_vrt07"), ExtResource("19_1hs4a"), ExtResource("19_f6c3u"), ExtResource("20_f3iou"), ExtResource("21_32ij4"), ExtResource("22_dqndv"), ExtResource("22_f3iou"), ExtResource("23_32ij4")])
+
+[node name="BuildingButton" type="Button" parent="." unique_id=800000002]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -455.0
+offset_top = 157.0
+offset_right = -356.0
+offset_bottom = 193.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Xây dựng"
+
+[node name="BuildingComponent" type="Node" parent="BuildingButton" unique_id=800000003]
+script = ExtResource("21_bldcomp")
+recipes = Array[Resource]([ExtResource("20_gqhsc"), ExtResource("22_26gn5"), ExtResource("23_f5ij0"), ExtResource("21_ukrik")])
+
+[node name="QuantitySelector" parent="." unique_id=2020976713 instance=ExtResource("12_bko8w")]
+visible = false
+layout_mode = 1
+
+[node name="ClearButton" type="Button" parent="." unique_id=2032632573]
+visible = false
+layout_mode = 0
+offset_left = 981.0
+offset_top = 118.0
+offset_right = 1030.0
+offset_bottom = 149.0
+text = "Clear
+"
+
+[node name="ClearComponent" type="Node" parent="ClearButton" unique_id=161016259]
+
+[node name="InventoryPlayer" type="AudioStreamPlayer" parent="." unique_id=440164053]
+stream = ExtResource("30_32ij4")
+bus = &"SFX"

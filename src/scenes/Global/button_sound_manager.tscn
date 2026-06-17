@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cxj4n1v0w5p7n"]
+
+[ext_resource type="Script" uid="uid://dnsof6uq3bsa2" path="res://scripts/Global/ButtonSoundManager.gd" id="1_manager"]
+[ext_resource type="AudioStream" uid="uid://dl5i10qbl8m2s" path="res://assets/sounds/sound effects/button_sound.mp3" id="1_tnux0"]
+
+[node name="ButtonSoundManager" type="AudioStreamPlayer" unique_id=1373465473]
+process_mode = 3
+stream = ExtResource("1_tnux0")
+bus = &"SFX"
+script = ExtResource("1_manager")

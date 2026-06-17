@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://er01gtanpifn"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_itembase"]
+[ext_resource type="Texture2D" uid="uid://ds1sawveuhr0v" path="res://assets/sprites/Materials/Ult Pack Materials Stone.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_itembase")
+id = "stone"
+name = "Đá"
+description = "Đá thu thập từ tảng đá. Nguyên liệu chế tạo cơ bản."
+icon = ExtResource("2_icon")
+stackable = true
+max_stacks = 99

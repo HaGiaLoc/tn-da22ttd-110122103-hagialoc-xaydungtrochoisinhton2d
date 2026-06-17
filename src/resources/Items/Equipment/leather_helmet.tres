@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bbawfkhwf1dbq"]
+
+[ext_resource type="Texture2D" uid="uid://bthw35vab423m" path="res://assets/sprites/Leather Helmet.png" id="1_iovni"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_jcn6t"]
+
+[resource]
+script = ExtResource("1_jcn6t")
+id = "leather_helmet"
+name = "Mũ da"
+description = "Giáp mũ làm từ da thú.
++ 1 giáp"
+icon = ExtResource("1_iovni")
+item_type = 2
+base_value = 6
+slot_type = 1
+armor = 10

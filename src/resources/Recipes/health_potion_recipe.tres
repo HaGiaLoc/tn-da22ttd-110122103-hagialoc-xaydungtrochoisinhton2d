@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://bxqknyb3rijod"]
+
+[ext_resource type="Script" uid="uid://coc1fuqd7wjwe" path="res://scripts/InventorySystem/crafting/CraftIngredient.gd" id="1_sfhl7"]
+[ext_resource type="Script" uid="uid://besc6jij5upui" path="res://scripts/InventorySystem/crafting/CraftingRecipe.gd" id="2_fbcja"]
+
+[sub_resource type="Resource" id="Ingredient_1"]
+script = ExtResource("1_sfhl7")
+item_id = "gold_coin"
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_sfhl7"]
+script = ExtResource("1_sfhl7")
+item_id = "apple"
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[sub_resource type="Resource" id="Resource_fbcja"]
+script = ExtResource("1_sfhl7")
+item_id = "cooked_meat"
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[resource]
+script = ExtResource("2_fbcja")
+result_item_id = "health_potion"
+ingredients = Array[Resource]([SubResource("Ingredient_1"), SubResource("Resource_sfhl7"), SubResource("Resource_fbcja")])

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://be1kqm5ulsgxj"]
+
+[ext_resource type="Script" uid="uid://cqhk4f1851u1i" path="res://addons/Universal Inventory System/scripts/itemization/AffixPool.gd" id="1_tj72n"]
+
+[node name="AffixPool" type="Node" unique_id=1927977899]
+script = ExtResource("1_tj72n")
+affixes_path = "res://example/affixes/"

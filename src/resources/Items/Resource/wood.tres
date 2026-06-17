@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://1lt7nd0fqm56"]
+
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_itembase"]
+[ext_resource type="Texture2D" uid="uid://c03sxggsh26kn" path="res://assets/sprites/Materials/Ult Pack Materials Wood.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_itembase")
+id = "wood"
+name = "Gỗ"
+description = "Gỗ thu thập từ cây rừng. Nguyên liệu chế tạo cơ bản."
+icon = ExtResource("2_icon")
+stackable = true
+max_stacks = 99

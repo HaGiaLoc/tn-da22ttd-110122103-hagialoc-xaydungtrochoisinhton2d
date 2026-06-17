@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://boe7u0nyosd8s"]
+
+[ext_resource type="Script" uid="uid://coc1fuqd7wjwe" path="res://scripts/InventorySystem/crafting/CraftIngredient.gd" id="1_s4jhw"]
+[ext_resource type="Script" uid="uid://besc6jij5upui" path="res://scripts/InventorySystem/crafting/CraftingRecipe.gd" id="2_1x2it"]
+
+[sub_resource type="Resource" id="Resource_1x2it"]
+script = ExtResource("1_s4jhw")
+item_id = "stick"
+quantity = 2
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[sub_resource type="Resource" id="Resource_s4jhw"]
+script = ExtResource("1_s4jhw")
+item_id = "rope"
+quantity = 3
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[sub_resource type="Resource" id="Resource_sl56q"]
+script = ExtResource("1_s4jhw")
+item_id = "stone"
+quantity = 3
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[resource]
+script = ExtResource("2_1x2it")
+result_item_id = "stone_pickaxe"
+ingredients = Array[Resource]([SubResource("Resource_1x2it"), SubResource("Resource_s4jhw"), SubResource("Resource_sl56q")])
+metadata/_custom_type_script = "uid://besc6jij5upui"

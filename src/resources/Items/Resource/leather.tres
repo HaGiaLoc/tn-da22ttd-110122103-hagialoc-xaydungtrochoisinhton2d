@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://b2m5tca816eni"]
+
+[ext_resource type="Texture2D" uid="uid://diesq6lfnytho" path="res://assets/sprites/Leather.png" id="1_0fo2u"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_uo8b7"]
+
+[resource]
+script = ExtResource("2_uo8b7")
+id = "leather"
+name = "Da thuộc"
+description = "Da thú hoang dã. Nguyên liệu chế tạo cơ bản."
+icon = ExtResource("1_0fo2u")
+stackable = true
+max_stacks = 99
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://dpiresoosstxw"]
+
+[ext_resource type="Texture2D" uid="uid://cd1588kc1cu41" path="res://assets/sprites/Leather Chestplate.png" id="1_502wb"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_r2p5r"]
+
+[resource]
+script = ExtResource("1_r2p5r")
+id = "leather_chestplate"
+name = "Giáp da"
+description = "Giáp thân làm từ da thú.
++ 2 giáp"
+icon = ExtResource("1_502wb")
+item_type = 2
+base_value = 6
+slot_type = 2
+armor = 20

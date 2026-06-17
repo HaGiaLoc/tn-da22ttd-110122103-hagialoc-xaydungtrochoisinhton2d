@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bp11h33414sbd"]
+
+[ext_resource type="Texture2D" uid="uid://cssvxxduqmvpb" path="res://assets/sprites/Copper Helmet.png" id="1_45xkk"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_qdgfx"]
+
+[resource]
+script = ExtResource("1_qdgfx")
+id = "copper_helmet"
+name = "Mũ đồng"
+description = "Giáp mũ làm từ đồng.
++ 1 giáp"
+icon = ExtResource("1_45xkk")
+item_type = 2
+base_value = 6
+slot_type = 1
+armor = 10

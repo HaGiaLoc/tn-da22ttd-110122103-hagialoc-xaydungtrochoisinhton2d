@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://def7vpf4f2wym"]
+
+[ext_resource type="Script" uid="uid://byfrl56y50v13" path="res://scripts/Building/PortalUI.gd" id="1_portalui"]
+
+[node name="PortalUI" type="PanelContainer" unique_id=100000001]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -280.0
+offset_right = 660.0
+offset_bottom = 280.0
+grow_vertical = 2
+script = ExtResource("1_portalui")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=100000002]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=100000003]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=100000004]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "✦ Kích hoạt cổng dịch chuyển ✦"
+horizontal_alignment = 1
+
+[node name="PortalArea" type="Control" parent="MarginContainer/VBoxContainer" unique_id=100000005]
+custom_minimum_size = Vector2(320, 280)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=100000006]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "0 / 4 cổ ngữ đã kích hoạt"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=100000007]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Đóng"

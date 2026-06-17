@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://dj05od8qqqe1r"]
+
+[ext_resource type="Script" uid="uid://cpjkn6c35sril" path="res://scripts/Resource/ResourceNode.gd" id="1_rn"]
+[ext_resource type="Texture2D" uid="uid://cnpuy4ch1sinr" path="res://assets/sprites/Rocks&Boulders/Ult Paclk Rock 2.png" id="2_r2"]
+[ext_resource type="Resource" uid="uid://bwcsbcw6urp5j" path="res://resources/Loot Tables/Resource/rock_loot_table.tres" id="3_lt"]
+[ext_resource type="AudioStream" uid="uid://bkm540eevctpv" path="res://assets/sounds/sound effects/pickaxe.mp3" id="4_rvbn6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(27, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
+radius = 16.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_do01q"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvbn6"]
+bg_color = Color(1, 1, 0, 0.49803922)
+
+[node name="Rock2" type="StaticBody2D" unique_id=1818548641]
+z_index = 2
+y_sort_enabled = true
+collision_mask = 2050
+script = ExtResource("1_rn")
+harvest_time = 4.0
+required_tool = 2
+loot_table = ExtResource("3_lt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1133889499]
+position = Vector2(0, -8)
+texture = ExtResource("2_r2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=710523490]
+shape = SubResource("RectangleShape2D_body")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=2080939668]
+position = Vector2(0, -8)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=882483751]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_interact")
+
+[node name="HintLabel" type="Label" parent="." unique_id=474758740]
+visible = false
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -43.0
+offset_right = 50.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[F]"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=157256992]
+visible = false
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -20.0
+offset_right = 32.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_do01q")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rvbn6")
+max_value = 1.0
+show_percentage = false
+
+[node name="HarvestPlayer" type="AudioStreamPlayer2D" parent="." unique_id=608118266]
+stream = ExtResource("4_rvbn6")

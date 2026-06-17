@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://ckw5ng7ske6jt"]
+
+[ext_resource type="Script" uid="uid://coc1fuqd7wjwe" path="res://scripts/InventorySystem/crafting/CraftIngredient.gd" id="1_ks1gh"]
+[ext_resource type="Script" uid="uid://besc6jij5upui" path="res://scripts/InventorySystem/crafting/CraftingRecipe.gd" id="2_jt0n2"]
+
+[sub_resource type="Resource" id="Resource_agk5p"]
+script = ExtResource("1_ks1gh")
+item_id = "stick"
+quantity = 2
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[sub_resource type="Resource" id="Resource_ks1gh"]
+script = ExtResource("1_ks1gh")
+item_id = "rope"
+quantity = 3
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[sub_resource type="Resource" id="Resource_sl56q"]
+script = ExtResource("1_ks1gh")
+item_id = "copper_ingot"
+quantity = 5
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[resource]
+script = ExtResource("2_jt0n2")
+result_item_id = "copper_pickaxe"
+ingredients = Array[Resource]([SubResource("Resource_agk5p"), SubResource("Resource_ks1gh"), SubResource("Resource_sl56q")])
+metadata/_custom_type_script = "uid://besc6jij5upui"

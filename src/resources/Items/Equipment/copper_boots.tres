@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bc2ntrpucwh0u"]
+
+[ext_resource type="Texture2D" uid="uid://47cbny243p3o" path="res://assets/sprites/Cooper Boots.png" id="1_4qdxl"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="1_jkxp1"]
+
+[resource]
+script = ExtResource("1_jkxp1")
+id = "copper_boots"
+name = "Giày đồng"
+description = "Giáp chân làm từ đồng.
++ 0.5 giáp"
+icon = ExtResource("1_4qdxl")
+item_type = 2
+base_value = 6
+slot_type = 4
+armor = 5

@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://gt6mufetjpb1"]
+
+[ext_resource type="Script" uid="uid://cpjkn6c35sril" path="res://scripts/Resource/ResourceNode.gd" id="1_rn"]
+[ext_resource type="Texture2D" uid="uid://bk5oiqnwmsnkr" path="res://assets/sprites/Trees&foliage/Ult Pack Tree 3.png" id="2_t3"]
+[ext_resource type="Texture2D" uid="uid://oebjtdw70j5k" path="res://assets/sprites/Trees&foliage/Ult Pack Stump.png" id="3_stump"]
+[ext_resource type="Resource" uid="uid://cjbarfs1sj5sl" path="res://resources/Loot Tables/Resource/tree_loot_table.tres" id="4_lt"]
+[ext_resource type="Resource" uid="uid://dvblxhsplw63q" path="res://resources/Loot Tables/Resource/stump_loot_table.tres" id="5_lts"]
+[ext_resource type="AudioStream" uid="uid://nbj3tx3c4kn6" path="res://assets/sounds/sound effects/chopping_wood.mp3" id="6_3qxmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4seff"]
+size = Vector2(24, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4seff"]
+radius = 16.492422
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfvl8"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qxmi"]
+bg_color = Color(1, 1, 0, 0.49803922)
+
+[node name="Tree3" type="StaticBody2D" unique_id=112715099]
+z_index = 2
+y_sort_enabled = true
+collision_mask = 2050
+script = ExtResource("1_rn")
+harvest_time = 4.0
+required_tool = 1
+loot_table = ExtResource("4_lt")
+depleted_texture = ExtResource("3_stump")
+depleted_sprite_offset = Vector2(0, 20)
+depleted_harvest_count = 1
+depleted_loot_table = ExtResource("5_lts")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=199926378]
+texture = ExtResource("2_t3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102929191]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_4seff")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=440102394]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1140414214]
+position = Vector2(0, 20)
+shape = SubResource("CircleShape2D_4seff")
+
+[node name="HintLabel" type="Label" parent="." unique_id=1273064416]
+visible = false
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -53.0
+offset_right = 50.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[F]"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=260299582]
+visible = false
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -30.0
+offset_right = 32.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_tfvl8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3qxmi")
+max_value = 1.0
+show_percentage = false
+
+[node name="HarvestPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1878273594]
+stream = ExtResource("6_3qxmi")

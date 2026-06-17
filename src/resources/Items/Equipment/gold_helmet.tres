@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://b713k1fl4ialf"]
+
+[ext_resource type="Texture2D" uid="uid://sqvnerefuwc5" path="res://assets/sprites/Gold Helmet.png" id="1_8ncno"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_h8524"]
+
+[resource]
+script = ExtResource("2_h8524")
+id = "gold_helmet"
+name = "Mũ vàng"
+description = "Giáp mũ làm từ vàng.
++ 2 giáp"
+icon = ExtResource("1_8ncno")
+item_type = 2
+base_value = 6
+slot_type = 1
+armor = 20

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryConfig" format=3 uid="uid://hotbar_cfg_001"]
+
+[ext_resource type="Script" uid="uid://cacgr4xd27am" path="res://scripts/InventorySystem/inventory/InventoryConfig.gd" id="1_hbcfg"]
+
+[resource]
+script = ExtResource("1_hbcfg")
+slots = 6
+autoload = true
+interactable = true
+persistent = true
+metadata/_custom_type_script = "uid://cacgr4xd27am"

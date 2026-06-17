@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="LootTable" format=3 uid="uid://cn0vhj2tp4g24"]
+
+[ext_resource type="Script" uid="uid://06l8l7mfajeq" path="res://scripts/InventorySystem/loot/LootTable.gd" id="1_lt"]
+[ext_resource type="Script" uid="uid://br7vna1vjxrf6" path="res://scripts/InventorySystem/loot/LootEntry.gd" id="2_le"]
+
+[sub_resource type="Resource" id="Resource_copper"]
+script = ExtResource("2_le")
+item_id = "copper_ore"
+quantity_max = 3
+metadata/_custom_type_script = "uid://br7vna1vjxrf6"
+
+[sub_resource type="Resource" id="Resource_stone"]
+script = ExtResource("2_le")
+item_id = "stone"
+quantity_max = 2
+drop_chance = 50.0
+metadata/_custom_type_script = "uid://br7vna1vjxrf6"
+
+[resource]
+script = ExtResource("1_lt")
+entries = Array[Resource]([SubResource("Resource_copper"), SubResource("Resource_stone")])
+metadata/_custom_type_script = "uid://06l8l7mfajeq"

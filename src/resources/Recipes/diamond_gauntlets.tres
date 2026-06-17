@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CraftingRecipe" format=3 uid="uid://lw6lfhtvaaou"]
+
+[ext_resource type="Script" uid="uid://coc1fuqd7wjwe" path="res://scripts/InventorySystem/crafting/CraftIngredient.gd" id="1_igxq5"]
+[ext_resource type="Script" uid="uid://besc6jij5upui" path="res://scripts/InventorySystem/crafting/CraftingRecipe.gd" id="2_xyhkw"]
+
+[sub_resource type="Resource" id="Resource_7seu8"]
+script = ExtResource("1_igxq5")
+item_id = "diamond"
+quantity = 3
+metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
+
+[resource]
+script = ExtResource("2_xyhkw")
+result_item_id = "diamond_gauntlets"
+ingredients = Array[Resource]([SubResource("Resource_7seu8")])
+metadata/_custom_type_script = "uid://besc6jij5upui"

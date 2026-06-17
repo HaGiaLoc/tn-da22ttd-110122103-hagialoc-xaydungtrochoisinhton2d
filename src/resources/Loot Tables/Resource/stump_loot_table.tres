@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LootTable" format=3 uid="uid://dvblxhsplw63q"]
+
+[ext_resource type="Script" uid="uid://06l8l7mfajeq" path="res://scripts/InventorySystem/loot/LootTable.gd" id="1_lt"]
+[ext_resource type="Script" uid="uid://br7vna1vjxrf6" path="res://scripts/InventorySystem/loot/LootEntry.gd" id="2_le"]
+
+[sub_resource type="Resource" id="Resource_wood"]
+script = ExtResource("2_le")
+item_id = "wood"
+quantity_max = 2
+metadata/_custom_type_script = "uid://br7vna1vjxrf6"
+
+[resource]
+script = ExtResource("1_lt")
+entries = Array[Resource]([SubResource("Resource_wood")])
+metadata/_custom_type_script = "uid://06l8l7mfajeq"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://davqplm4ki6kf"]
+
+[ext_resource type="Texture2D" uid="uid://coibxbj7by3hf" path="res://assets/sprites/Gold Chestplate.png" id="1_vguch"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_0n23b"]
+
+[resource]
+script = ExtResource("2_0n23b")
+id = "gold_chestplate"
+name = "Giáp vàng"
+description = "Giáp thân làm từ vàng.
++ 5 giáp"
+icon = ExtResource("1_vguch")
+item_type = 2
+base_value = 6
+slot_type = 2
+armor = 50

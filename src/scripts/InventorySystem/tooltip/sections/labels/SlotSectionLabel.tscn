@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cyes3pgjaxf62"]
+
+[node name="SlotSectionLabel" type="RichTextLabel"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.38039216, 0.83137256, 0.5176471, 1)
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0

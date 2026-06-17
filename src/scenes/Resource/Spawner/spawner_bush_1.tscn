@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c5mkwojemypjf"]
+
+[ext_resource type="Script" uid="uid://bxbjov506rsqg" path="res://scripts/Resource/ResourceSpawner.gd" id="1_rs"]
+[ext_resource type="PackedScene" uid="uid://dqaccnkrmwbt4" path="res://scenes/Resource/Node/bush_1.tscn" id="2_scene"]
+
+[node name="SpawnerBush1" type="Node2D" unique_id=18434786]
+script = ExtResource("1_rs")
+resource_scene = ExtResource("2_scene")

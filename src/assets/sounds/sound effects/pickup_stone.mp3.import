@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dglfa1ib4wu6k"
+path="res://.godot/imported/pickup_stone.mp3-946ee146cef1742514229dd764e651d4.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/sound effects/pickup_stone.mp3"
+dest_files=["res://.godot/imported/pickup_stone.mp3-946ee146cef1742514229dd764e651d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

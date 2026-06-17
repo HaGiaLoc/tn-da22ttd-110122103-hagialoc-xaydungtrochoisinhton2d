@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://bcelrcjqa4hos"]
+
+[ext_resource type="Texture2D" uid="uid://beqgaj7eoybc5" path="res://assets/sprites/Food/Ult Pack Food Cooked Steak.png" id="1_kjian"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_3x7w0"]
+
+[resource]
+script = ExtResource("2_3x7w0")
+id = "cooked_meat"
+name = "Thịt chín"
+description = "Thịt đã nấu chín.
++ 35 điểm Đói"
+icon = ExtResource("1_kjian")
+item_type = 1
+stackable = true
+max_stacks = 99
+restore_health = 10
+restore_hunger = 35
+metadata/_custom_type_script = "uid://cp0xyhxpa1pxt"

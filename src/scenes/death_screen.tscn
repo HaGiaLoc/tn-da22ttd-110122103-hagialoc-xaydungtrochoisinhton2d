@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://celfo77hsghvw"]
+
+[ext_resource type="Script" uid="uid://crjp1j85juq7" path="res://scripts/DeathScreen.gd" id="1_death"]
+
+[node name="DeathScreen" type="Control" unique_id=300000001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_death")
+
+[node name="Background" type="ColorRect" parent="." unique_id=300000002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078431375, 0, 0, 0.5019608)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=300000003]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=300000004]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=300000005]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 56
+text = "Bạn Đã Chết"
+horizontal_alignment = 1
+
+[node name="SurvivalTimeLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=300000006]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.75, 0.75, 1)
+theme_override_font_sizes/font_size = 22
+text = "Thời gian sống sót: 00:00"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer" unique_id=300000009]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="LoadButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=300000007]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 18
+text = "Tải Bản Lưu"
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=300000010]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 18
+text = "Quay Về Menu Chính"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=300000008]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 18
+text = "Thoát Game"

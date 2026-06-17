@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://b5i3qwglyp245"]
+
+[ext_resource type="Texture2D" uid="uid://dmktgjmfbsmf3" path="res://assets/sprites/Diamond Helmet.png" id="1_ifeh8"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_npwch"]
+
+[resource]
+script = ExtResource("2_npwch")
+id = "diamond_helmet"
+name = "Mũ kim cương"
+description = "Giáp mũ làm từ kim cương.
++ 5 giáp"
+icon = ExtResource("1_ifeh8")
+item_type = 2
+base_value = 6
+slot_type = 1
+armor = 50

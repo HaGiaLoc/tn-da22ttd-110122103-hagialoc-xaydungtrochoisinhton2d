@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://cie6777xc5p3p"]
+
+[ext_resource type="Texture2D" uid="uid://ccvp6f4wcd5wl" path="res://assets/sprites/Stone Axe.png" id="1_adc24"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_nhjlw"]
+
+[resource]
+script = ExtResource("2_nhjlw")
+id = "stone_axe"
+name = "Rìu Đá"
+description = "Rìu làm từ đá, dùng để chặt cây.
++ 1 Hiệu suất khai thác"
+icon = ExtResource("1_adc24")
+item_type = 2
+base_value = 4
+slot_type = 6
+mining_efficiency = 1.0

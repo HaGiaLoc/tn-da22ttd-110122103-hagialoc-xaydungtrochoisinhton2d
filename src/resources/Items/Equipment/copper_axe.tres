@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://wm0mpbdm2u4d"]
+
+[ext_resource type="Texture2D" uid="uid://bu4dwuvot4ke8" path="res://assets/sprites/Copper Axe.png" id="1_hbbij"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_exyoi"]
+
+[resource]
+script = ExtResource("2_exyoi")
+id = "copper_axe"
+name = "Rìu Đồng"
+description = "Rìu làm từ đồng, dùng để chặt cây.
++ 3 Hiệu suất khai thác"
+icon = ExtResource("1_hbbij")
+item_type = 2
+base_value = 4
+slot_type = 6
+mining_efficiency = 3.0

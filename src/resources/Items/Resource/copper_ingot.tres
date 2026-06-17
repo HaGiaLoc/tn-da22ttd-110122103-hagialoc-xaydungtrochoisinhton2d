@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://ccic7ybth1dla"]
+
+[ext_resource type="Texture2D" uid="uid://d3vdu5xbkey6a" path="res://assets/sprites/Copper Ingot.png" id="1_2qqsy"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_0enpu"]
+
+[resource]
+script = ExtResource("2_0enpu")
+id = "copper_ingot"
+name = "Thỏi Đồng"
+description = "Thỏi đồng được tinh luyện từ quặng đồng. Dùng để chế tạo đồ đồng."
+icon = ExtResource("1_2qqsy")
+stackable = true
+max_stacks = 99
+base_value = 3
