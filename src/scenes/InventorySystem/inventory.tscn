@@ -126,11 +126,13 @@ layout_mode = 1
 anchors_preset = -1
 
 [node name="BuildingMenu" parent="." unique_id=800000001 instance=ExtResource("20_bldmenu")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 grow_vertical = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1317701788]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.48400003
