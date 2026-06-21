@@ -8,7 +8,7 @@ script = ExtResource("1_jcn6t")
 id = "leather_helmet"
 name = "Mũ da"
 description = "Giáp mũ làm từ da thú.
-+ 1 giáp"
++ 1 Giáp"
 icon = ExtResource("1_iovni")
 item_type = 2
 base_value = 6

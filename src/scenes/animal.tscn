@@ -1444,6 +1444,8 @@ health_bar_path = NodePath("HealthBar")
 speed = 70.0
 loot_table = ExtResource("2_7do3a")
 run_speed = 150.0
+idle_time = 10.0
+idle_time_random_variation = 3.0
 debug_state_output = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1637938548]

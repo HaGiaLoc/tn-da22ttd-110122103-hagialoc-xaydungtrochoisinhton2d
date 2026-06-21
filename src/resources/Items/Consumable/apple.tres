@@ -8,7 +8,8 @@ script = ExtResource("2_8o3mi")
 id = "apple"
 name = "Táo"
 description = "Quả táo rơi ra từ cây.
-+ 10 điểm Đói"
++ 5 điểm Máu.
++ 15 điểm Đói."
 icon = ExtResource("1_wyla6")
 item_type = 1
 stackable = true

@@ -21,7 +21,6 @@ z_index = 2
 y_sort_enabled = true
 collision_mask = 2050
 script = ExtResource("1_rn")
-harvest_time = 5.0
 required_tool = 2
 loot_table = ExtResource("3_lt")
 

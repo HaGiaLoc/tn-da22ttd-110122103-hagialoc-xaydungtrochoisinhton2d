@@ -8,7 +8,8 @@ script = ExtResource("2_3x7w0")
 id = "cooked_meat"
 name = "Thịt chín"
 description = "Thịt đã nấu chín.
-+ 35 điểm Đói"
++ 10 điểm Máu.
++ 35 điểm Đói."
 icon = ExtResource("1_kjian")
 item_type = 1
 stackable = true

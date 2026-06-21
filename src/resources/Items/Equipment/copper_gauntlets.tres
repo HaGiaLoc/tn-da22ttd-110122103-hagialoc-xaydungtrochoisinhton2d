@@ -8,9 +8,9 @@ script = ExtResource("2_qgt4d")
 id = "copper_gauntlets"
 name = "Găng tay đồng"
 description = "Giáp tay làm từ đồng.
-+ 1 giáp"
++ 0.5 giáp"
 icon = ExtResource("1_wjkvv")
 item_type = 2
 base_value = 6
 slot_type = 3
-armor = 10
+armor = 5

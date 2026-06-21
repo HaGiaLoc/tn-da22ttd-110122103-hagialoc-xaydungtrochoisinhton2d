@@ -1569,8 +1569,6 @@ position = Vector2(3935.209, 3477.3035)
 health_bar_path = NodePath("../CanvasLayer/HealthBar")
 inventory_ui_path = NodePath("../CanvasLayer/Inventory")
 hunger_bar_path = NodePath("../CanvasLayer/HungerBar")
-hunger_drain_interval = 3.0
-run_hunger_drain_interval = 0.5
 
 [node name="Wolf Spawn Point" parent="." unique_id=1282961999 instance=ExtResource("6_gee14")]
 process_mode = 1

@@ -1032,7 +1032,8 @@ script = ExtResource("1_i4ail")
 damage_area_path = NodePath("HitBox")
 anim_sprite_path = NodePath("AnimatedSprite2D")
 hurt_box_path = NodePath("HurtBox")
-run_hunger_drain_interval = 2.5
+hunger_drain_interval = 3.0
+run_hunger_drain_interval = 1.5
 run_hunger_drain_amount = 1.0
 combo_window = 2.0
 
@@ -1051,9 +1052,7 @@ texture = ExtResource("2_a38lo")
 z_index = 1
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_juthh")
-animation = &"attack_1_down"
-frame = 7
-frame_progress = 1.0
+animation = &"idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1549769571]
 zoom = Vector2(2, 2)

@@ -8,9 +8,9 @@ script = ExtResource("2_0n23b")
 id = "gold_chestplate"
 name = "Giáp vàng"
 description = "Giáp thân làm từ vàng.
-+ 5 giáp"
++ 4 giáp"
 icon = ExtResource("1_vguch")
 item_type = 2
 base_value = 6
 slot_type = 2
-armor = 50
+armor = 40

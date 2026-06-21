@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://co1ykepspxw4o"]
+
+[ext_resource type="Texture2D" uid="uid://bekfqhgjgaemw" path="res://assets/sprites/Copper Shield.png" id="1_r21xq"]
+[ext_resource type="Script" uid="uid://cp0xyhxpa1pxt" path="res://scripts/InventorySystem/itemization/ItemBase.gd" id="2_k2cnq"]
+
+[resource]
+script = ExtResource("2_k2cnq")
+id = "copper_shield"
+name = "Khiên Đồng"
+description = "Khiên làm từ đồng, dùng để đỡ đòn.
++ 25% cơ hội Đỡ đòn."
+icon = ExtResource("1_r21xq")
+item_type = 2
+base_value = 4
+slot_type = 8
+mining_efficiency = 3.0
+block_chance = 25
