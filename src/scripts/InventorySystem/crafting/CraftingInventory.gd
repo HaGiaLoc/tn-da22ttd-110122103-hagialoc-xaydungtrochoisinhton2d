@@ -4,7 +4,7 @@ extends Control
 const RecipeScript = preload("res://scripts/InventorySystem/crafting/CraftingRecipe.gd")
 const IngredientScript = preload("res://scripts/InventorySystem/crafting/CraftIngredient.gd")
 
-@export var recipe_list: VBoxContainer  ## Container chứa các recipe row
+@export var recipe_list: Control  ## Container chứa các recipe column
 @export var recipe_row_scene: PackedScene  ## Scene cho mỗi dòng recipe
 
 var _crafting_component: CraftingComponent
@@ -81,21 +81,33 @@ func _rebuild_list() -> void:
 	var inventory_system := get_node_or_null("/root/InventorySystem")
 	print("[CraftingInventory] _rebuild_list: %d recipes" % _crafting_component.recipes.size())
 
+	var current_column: VBoxContainer = null
+	var items_in_column: int = 0
+
 	for i in _crafting_component.recipes.size():
 		var recipe = _crafting_component.get_recipe(i)
 		print("[CraftingInventory] recipe[%d] = %s, valid=%s" % [i, str(recipe), str(recipe != null and recipe.is_valid())])
 		if not recipe or not recipe.is_valid():
 			continue
 
+		if items_in_column == 0:
+			current_column = VBoxContainer.new()
+			current_column.add_theme_constant_override("separation", 4)
+			recipe_list.add_child(current_column)
+
 		var row: Control
 		if recipe_row_scene:
 			row = recipe_row_scene.instantiate()
-			recipe_list.add_child(row)
+			current_column.add_child(row)
 			if row.has_method("setup"):
 				row.setup(i, recipe, _crafting_component, inventory_system)
 		else:
 			row = _build_default_row(i, recipe, inventory_system)
-			recipe_list.add_child(row)
+			current_column.add_child(row)
+
+		items_in_column += 1
+		if items_in_column >= 7:
+			items_in_column = 0
 
 	_connect_inventory_signals()
 

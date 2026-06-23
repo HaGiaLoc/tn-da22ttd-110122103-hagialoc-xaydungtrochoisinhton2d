@@ -24,6 +24,6 @@ layout_mode = 2
 text = "Crafting"
 horizontal_alignment = 1
 
-[node name="RecipeList" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="RecipeList" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3

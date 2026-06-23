@@ -42,7 +42,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.25, 0.25, 1)
 text = "Phá dỡ"
 
-[node name="RecipeList" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=925235883]
+[node name="RecipeList" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=925235883]
 layout_mode = 2
 size_flags_vertical = 3
 

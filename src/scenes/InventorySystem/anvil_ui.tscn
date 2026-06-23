@@ -31,7 +31,7 @@ theme_override_font_sizes/font_size = 24
 text = "Công thức"
 horizontal_alignment = 1
 
-[node name="RecipeList" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=925235883]
+[node name="RecipeList" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=925235883]
 layout_mode = 2
 size_flags_vertical = 3
 

@@ -35,7 +35,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="RecipeList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/RecipeListWrapper" unique_id=925235883]
+[node name="RecipeList" type="HBoxContainer" parent="MarginContainer/VBoxContainer/RecipeListWrapper" unique_id=925235883]
 layout_mode = 2
 size_flags_horizontal = 0
 
