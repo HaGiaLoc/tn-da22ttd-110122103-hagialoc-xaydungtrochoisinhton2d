@@ -17,7 +17,7 @@ metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
 
 [sub_resource type="Resource" id="Resource_sl56q"]
 script = ExtResource("1_68u78")
-item_id = "gold"
+item_id = "gold_ingot"
 quantity = 2
 metadata/_custom_type_script = "uid://coc1fuqd7wjwe"
 

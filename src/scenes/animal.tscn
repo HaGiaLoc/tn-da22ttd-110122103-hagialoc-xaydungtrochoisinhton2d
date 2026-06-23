@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://cedewq0mvwk2d"]
 
-[ext_resource type="Texture2D" uid="uid://q25xoglrpa8u" path="res://assets/Unused/Sprites/critters/stag/critter_stag_SW_idle.png" id="1_3v7ex"]
+[ext_resource type="Texture2D" uid="uid://q25xoglrpa8u" path="res://assets/sprites/stag/critter_stag_SW_idle.png" id="1_3v7ex"]
 [ext_resource type="Script" uid="uid://biofqk0fb571n" path="res://scripts/Animal/animal.gd" id="1_jp041"]
-[ext_resource type="Texture2D" uid="uid://df8lny3pi8sd4" path="res://assets/Unused/Sprites/critters/stag/critter_stag_SE_idle.png" id="2_3c5tq"]
+[ext_resource type="Texture2D" uid="uid://df8lny3pi8sd4" path="res://assets/sprites/stag/critter_stag_SE_idle.png" id="2_3c5tq"]
 [ext_resource type="Resource" uid="uid://d2qvs2nspbmt1" path="res://resources/Loot Tables/deer_loot_table.tres" id="2_7do3a"]
-[ext_resource type="Texture2D" uid="uid://0h5i0ihn4y8i" path="res://assets/Unused/Sprites/critters/stag/critter_stag_NW_idle.png" id="3_ieass"]
-[ext_resource type="Texture2D" uid="uid://cwhj512wpdych" path="res://assets/Unused/Sprites/critters/stag/critter_stag_NE_idle.png" id="4_ieass"]
-[ext_resource type="Texture2D" uid="uid://b7e4kgom7nkun" path="res://assets/Unused/Sprites/critters/stag/critter_stag_SW_walk.png" id="5_hb82n"]
-[ext_resource type="Texture2D" uid="uid://dub83recuoc0i" path="res://assets/Unused/Sprites/critters/stag/critter_stag_SE_walk.png" id="6_fiknr"]
-[ext_resource type="Texture2D" uid="uid://eionget5nlf4" path="res://assets/Unused/Sprites/critters/stag/critter_stag_NW_walk.png" id="7_d06xb"]
-[ext_resource type="Texture2D" uid="uid://bbujclfxta44w" path="res://assets/Unused/Sprites/critters/stag/critter_stag_NE_walk.png" id="8_gceah"]
-[ext_resource type="Texture2D" uid="uid://cdn1nujkk3k6e" path="res://assets/Unused/Sprites/critters/stag/critter_stag_SW_run.png" id="9_s21jh"]
-[ext_resource type="Texture2D" uid="uid://ch1aligu15522" path="res://assets/Unused/Sprites/critters/stag/critter_stag_SE_run.png" id="10_d06xb"]
-[ext_resource type="Texture2D" uid="uid://jx1xnxquxqjg" path="res://assets/Unused/Sprites/critters/stag/critter_stag_NW_run.png" id="11_gceah"]
-[ext_resource type="Texture2D" uid="uid://nxn2b5xxdce5" path="res://assets/Unused/Sprites/critters/stag/critter_stag_NE_run.png" id="12_s21jh"]
+[ext_resource type="Texture2D" uid="uid://0h5i0ihn4y8i" path="res://assets/sprites/stag/critter_stag_NW_idle.png" id="3_ieass"]
+[ext_resource type="Texture2D" uid="uid://cwhj512wpdych" path="res://assets/sprites/stag/critter_stag_NE_idle.png" id="4_ieass"]
+[ext_resource type="Texture2D" uid="uid://b7e4kgom7nkun" path="res://assets/sprites/stag/critter_stag_SW_walk.png" id="5_hb82n"]
+[ext_resource type="Texture2D" uid="uid://dub83recuoc0i" path="res://assets/sprites/stag/critter_stag_SE_walk.png" id="6_fiknr"]
+[ext_resource type="Texture2D" uid="uid://eionget5nlf4" path="res://assets/sprites/stag/critter_stag_NW_walk.png" id="7_d06xb"]
+[ext_resource type="Texture2D" uid="uid://bbujclfxta44w" path="res://assets/sprites/stag/critter_stag_NE_walk.png" id="8_gceah"]
+[ext_resource type="Texture2D" uid="uid://cdn1nujkk3k6e" path="res://assets/sprites/stag/critter_stag_SW_run.png" id="9_s21jh"]
+[ext_resource type="Texture2D" uid="uid://ch1aligu15522" path="res://assets/sprites/stag/critter_stag_SE_run.png" id="10_d06xb"]
+[ext_resource type="Texture2D" uid="uid://jx1xnxquxqjg" path="res://assets/sprites/stag/critter_stag_NW_run.png" id="11_gceah"]
+[ext_resource type="Texture2D" uid="uid://nxn2b5xxdce5" path="res://assets/sprites/stag/critter_stag_NE_run.png" id="12_s21jh"]
 [ext_resource type="Script" uid="uid://cq2uq63xnydfy" path="res://scripts/Animal/detection_area.gd" id="14_7do3a"]
 [ext_resource type="Script" uid="uid://bvjycmcssmie6" path="res://scripts/Animal/hurt_box.gd" id="15_qag4x"]
 [ext_resource type="Script" uid="uid://bkpnefrswfjuy" path="res://scripts/Animal/health_bar.gd" id="16_10oeq"]
@@ -767,7 +767,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jqpxl")
 }],
-"loop": false,
+"loop": 0,
 "name": &"hurt_down_left",
 "speed": 1.0
 }, {
@@ -775,7 +775,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xl4ys")
 }],
-"loop": false,
+"loop": 0,
 "name": &"hurt_down_right",
 "speed": 1.0
 }, {
@@ -783,7 +783,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3wd0r")
 }],
-"loop": false,
+"loop": 0,
 "name": &"hurt_up_left",
 "speed": 1.0
 }, {
@@ -791,7 +791,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ab36h")
 }],
-"loop": false,
+"loop": 0,
 "name": &"hurt_up_right",
 "speed": 1.0
 }, {
@@ -874,7 +874,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_20wpp")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_down_left",
 "speed": 7.0
 }, {
@@ -957,7 +957,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_irurb")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_down_right",
 "speed": 7.0
 }, {
@@ -1040,7 +1040,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ih8sf")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_up_left",
 "speed": 7.0
 }, {
@@ -1123,7 +1123,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4loxw")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_up_right",
 "speed": 7.0
 }, {
@@ -1161,7 +1161,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k3gle")
 }],
-"loop": true,
+"loop": 1,
 "name": &"move_down_left",
 "speed": 11.0
 }, {
@@ -1199,7 +1199,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dtoyq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"move_down_right",
 "speed": 11.0
 }, {
@@ -1237,7 +1237,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0ufnw")
 }],
-"loop": true,
+"loop": 1,
 "name": &"move_up_left",
 "speed": 11.0
 }, {
@@ -1275,7 +1275,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8uay6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"move_up_right",
 "speed": 11.0
 }, {
@@ -1310,7 +1310,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8hmcx")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_down_left",
 "speed": 15.0
 }, {
@@ -1345,7 +1345,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pynrj")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_down_right",
 "speed": 15.0
 }, {
@@ -1380,7 +1380,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2febl")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_up_left",
 "speed": 15.0
 }, {
@@ -1415,7 +1415,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v141l")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_up_right",
 "speed": 15.0
 }]
@@ -1492,13 +1492,14 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -13.0
-offset_top = -17.0
+offset_top = -25.0
 offset_right = 13.0
-offset_bottom = -13.0
+offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/fill = SubResource("StyleBoxFlat_8qclf")
 step = 1.0
+value = 100.0
 show_percentage = false
 script = ExtResource("16_10oeq")
 

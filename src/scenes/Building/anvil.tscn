@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bw6liwsd4raby" path="res://assets/sprites/Crafting Stations/Ult Pack Anvil.png" id="3_85plp"]
 [ext_resource type="Script" uid="uid://dv3wrycrb3qr3" path="res://scripts/InventorySystem/crafting/CraftingComponent.gd" id="4_vek87"]
 [ext_resource type="Resource" uid="uid://psa32lmv5mhv" path="res://resources/Recipes/copper_axe_recipe.tres" id="5_x61fo"]
+[ext_resource type="Resource" uid="uid://divtrec41srjr" path="res://resources/Recipes/copper_shield_recipe.tres" id="5_xsm88"]
 [ext_resource type="Resource" uid="uid://ckw5ng7ske6jt" path="res://resources/Recipes/copper_pickaxe_recipe.tres" id="6_dxnoc"]
 [ext_resource type="Resource" uid="uid://3ymdm373b4ga" path="res://resources/Recipes/diamond_axe_recipe.tres" id="7_85plp"]
 [ext_resource type="Resource" uid="uid://c5thg5oxrnyt0" path="res://resources/Recipes/diamond_pickaxe_recipe.tres" id="8_8j2i6"]
@@ -69,7 +70,7 @@ horizontal_alignment = 1
 
 [node name="CraftingComponent" type="Node" parent="." unique_id=965657191]
 script = ExtResource("4_vek87")
-recipes = Array[Resource]([ExtResource("5_x61fo"), ExtResource("6_dxnoc"), ExtResource("7_85plp"), ExtResource("8_8j2i6"), ExtResource("9_qqp1n"), ExtResource("10_gsjtm"), ExtResource("11_xsm88"), ExtResource("9_urcm3"), ExtResource("10_an07m"), ExtResource("11_fnnw1"), ExtResource("12_qqp1n"), ExtResource("13_gsjtm"), ExtResource("14_xsm88"), ExtResource("15_t4yan"), ExtResource("16_8n853"), ExtResource("17_qy6tm"), ExtResource("18_kbue5"), ExtResource("19_2y7d2"), ExtResource("20_nlmf5")])
+recipes = Array[Resource]([ExtResource("5_xsm88"), ExtResource("5_x61fo"), ExtResource("6_dxnoc"), ExtResource("7_85plp"), ExtResource("8_8j2i6"), ExtResource("9_qqp1n"), ExtResource("10_gsjtm"), ExtResource("11_xsm88"), ExtResource("9_urcm3"), ExtResource("10_an07m"), ExtResource("11_fnnw1"), ExtResource("12_qqp1n"), ExtResource("13_gsjtm"), ExtResource("14_xsm88"), ExtResource("15_t4yan"), ExtResource("16_8n853"), ExtResource("17_qy6tm"), ExtResource("18_kbue5"), ExtResource("19_2y7d2"), ExtResource("20_nlmf5")])
 
 [node name="AnvilPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1570384959]
 stream = ExtResource("24_gsjtm")

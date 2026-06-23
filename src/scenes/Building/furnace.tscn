@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://bvnfo7drhmxco" path="res://resources/Recipes/copper_ingot_recipe.tres" id="9_o6ch5"]
 [ext_resource type="Resource" uid="uid://bqqukpr66asrr" path="res://resources/Recipes/gold_ingot_recipe.tres" id="10_2sm2f"]
 [ext_resource type="AudioStream" uid="uid://4iwaa2x7tsfe" path="res://assets/sounds/sound effects/furnace_fire.mp3" id="11_0an1k"]
+[ext_resource type="Resource" uid="uid://2nvcx1h5kqur" path="res://resources/Recipes/gold_coin_recipe.tres" id="11_fhd04"]
 [ext_resource type="AudioStream" uid="uid://dn727ewohvxgc" path="res://assets/sounds/sound effects/furnace_burning.mp3" id="12_fhd04"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
@@ -110,7 +111,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_45m7t")
 }],
-"loop": true,
+"loop": 1,
 "name": &"off",
 "speed": 1.0
 }, {
@@ -130,7 +131,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y5ro2")
 }],
-"loop": true,
+"loop": 1,
 "name": &"on",
 "speed": 6.0
 }, {
@@ -159,7 +160,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2sm2f")
 }],
-"loop": false,
+"loop": 0,
 "name": &"turning_off",
 "speed": 7.0
 }, {
@@ -188,7 +189,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fmu6k")
 }],
-"loop": false,
+"loop": 0,
 "name": &"turning_on",
 "speed": 7.0
 }]
@@ -239,7 +240,7 @@ horizontal_alignment = 1
 
 [node name="CraftingComponent" type="Node" parent="." unique_id=1400778871]
 script = ExtResource("7_a7yg5")
-recipes = Array[Resource]([ExtResource("8_dcx21"), ExtResource("9_o6ch5"), ExtResource("10_2sm2f")])
+recipes = Array[Resource]([ExtResource("8_dcx21"), ExtResource("9_o6ch5"), ExtResource("10_2sm2f"), ExtResource("11_fhd04")])
 
 [node name="FurnaceFirePlayer" type="AudioStreamPlayer2D" parent="." unique_id=2012545900]
 stream = ExtResource("11_0an1k")
