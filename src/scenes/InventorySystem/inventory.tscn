@@ -17,15 +17,11 @@
 [ext_resource type="Resource" uid="uid://d0w5htdp0qk5o" path="res://resources/Recipes/rope.tres" id="17_1hs4a"]
 [ext_resource type="Resource" uid="uid://c7daq43wtlvad" path="res://resources/Recipes/stick_2_recipe.tres" id="18_vrt07"]
 [ext_resource type="Resource" uid="uid://rytq0dbdgbwc" path="res://resources/Recipes/stone_sword_recipe.tres" id="19_1hs4a"]
-[ext_resource type="Resource" uid="uid://cesp4e8pbqaac" path="res://resources/Recipes/leather_boots.tres" id="19_f6c3u"]
 [ext_resource type="PackedScene" uid="uid://d0g1inadejrvv" path="res://scenes/InventorySystem/building_menu.tscn" id="20_bldmenu"]
-[ext_resource type="Resource" uid="uid://crqbk01qb3mqg" path="res://resources/Recipes/leather_chestplate.tres" id="20_f3iou"]
 [ext_resource type="Resource" uid="uid://cl0iqiijjplte" path="res://resources/BuildingRecipes/crafting_table_recipe.tres" id="20_gqhsc"]
-[ext_resource type="Resource" uid="uid://cfbos3p117jp8" path="res://resources/Recipes/leather_gauntlets.tres" id="21_32ij4"]
 [ext_resource type="Script" uid="uid://bup15sqce44bf" path="res://scripts/InventorySystem/building/BuildingComponent.gd" id="21_bldcomp"]
 [ext_resource type="Resource" uid="uid://xysioc6o0p6b" path="res://resources/BuildingRecipes/anvil_recipe.tres" id="21_ukrik"]
 [ext_resource type="Resource" uid="uid://dctujtj32dmww" path="res://resources/BuildingRecipes/chest_recipe.tres" id="22_26gn5"]
-[ext_resource type="Resource" uid="uid://cc71vf4exam7x" path="res://resources/Recipes/leather_helmet.tres" id="22_dqndv"]
 [ext_resource type="Resource" uid="uid://bxqknyb3rijod" path="res://resources/Recipes/health_potion_recipe.tres" id="22_f3iou"]
 [ext_resource type="Resource" uid="uid://bepmwhwqvtjkx" path="res://resources/Recipes/greater_health_potion_recipe.tres" id="23_32ij4"]
 [ext_resource type="Resource" uid="uid://djnpnmgb1ml83" path="res://resources/BuildingRecipes/furnace_recipe.tres" id="23_f5ij0"]
@@ -98,16 +94,16 @@ layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -202.0
-offset_bottom = 221.0
+offset_top = -150.0
+offset_bottom = 273.0
 
 [node name="PlayerEquipment" parent="." unique_id=2037063451 node_paths=PackedStringArray("slots") instance=ExtResource("3_ewhgc")]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -115.0
-offset_bottom = 102.0
+offset_top = -63.0
+offset_bottom = 154.0
 grow_horizontal = 1
 slots = {
 1: null,
@@ -217,9 +213,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -455.0
-offset_top = -148.0
+offset_top = -96.0
 offset_right = -322.0
-offset_bottom = -108.0
+offset_bottom = -56.0
 theme_override_font_sizes/font_size = 20
 text = "Trang Bị"
 horizontal_alignment = 1
@@ -233,9 +229,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -299.0
-offset_top = -231.0
+offset_top = -179.0
 offset_right = -31.0
-offset_bottom = -191.0
+offset_bottom = -139.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
 text = "Túi đồ"
@@ -289,9 +285,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -455.0
-offset_top = 110.0
+offset_top = 162.0
 offset_right = -373.0
-offset_bottom = 146.0
+offset_bottom = 198.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
@@ -299,7 +295,7 @@ text = "Chế tạo"
 
 [node name="CraftingComponent" type="Node" parent="CraftingButton" unique_id=1424875561]
 script = ExtResource("13_4f5gg")
-recipes = Array[Resource]([ExtResource("18_vrt07"), ExtResource("17_1hs4a"), ExtResource("15_bgwix"), ExtResource("16_vrt07"), ExtResource("19_1hs4a"), ExtResource("19_f6c3u"), ExtResource("20_f3iou"), ExtResource("21_32ij4"), ExtResource("22_dqndv"), ExtResource("22_f3iou"), ExtResource("23_32ij4")])
+recipes = Array[Resource]([ExtResource("18_vrt07"), ExtResource("17_1hs4a"), ExtResource("15_bgwix"), ExtResource("16_vrt07"), ExtResource("19_1hs4a"), ExtResource("22_f3iou"), ExtResource("23_32ij4")])
 
 [node name="BuildingButton" type="Button" parent="." unique_id=800000002]
 layout_mode = 1
@@ -309,9 +305,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -455.0
-offset_top = 157.0
+offset_top = 209.0
 offset_right = -356.0
-offset_bottom = 193.0
+offset_bottom = 245.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
