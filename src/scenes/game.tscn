@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ctp885jxwxi8e" path="res://scenes/Building/portal.tscn" id="5_ca42v"]
 [ext_resource type="PackedScene" uid="uid://bhjx2poxvks30" path="res://scenes/spawn_point.tscn" id="6_gee14"]
 [ext_resource type="PackedScene" uid="uid://ykspkjng2h1d" path="res://scenes/setting_panel.tscn" id="6_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://cx60uayb18f8e" path="res://scenes/Global/tutorial_ui.tscn" id="7_suyxu"]
 [ext_resource type="Texture2D" uid="uid://hal5u42g44r8" path="res://assets/sprites/Tilesets/Ult Pack Grass Tilesets/Ult Pack Grasses Tileset.png" id="9_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://cq0a15v52aq8v" path="res://assets/sprites/Tilesets/Ult Pack Sand-Beach Tilesets(Anim)/Ult Pack Sand Anim Tileset Corners .png" id="9_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bpwxos0lxhxia" path="res://scenes/enemy.tscn" id="9_qnb83"]
@@ -1414,6 +1415,7 @@ script = ExtResource("1_p57ef")
 
 [node name="PauseLayer" type="CanvasLayer" parent="." unique_id=1547624185]
 process_mode = 2
+layer = 2
 
 [node name="PauseMenu" type="Control" parent="PauseLayer" unique_id=190302895]
 visible = false
@@ -1559,6 +1561,8 @@ z_index = 10
 
 [node name="Hotbar" parent="CanvasLayer" unique_id=1249861300 instance=ExtResource("38_hotbar")]
 layout_mode = 3
+
+[node name="TutorialUI" parent="CanvasLayer" unique_id=1306084537 instance=ExtResource("7_suyxu")]
 
 [node name="Portal" parent="." unique_id=300000001 instance=ExtResource("5_ca42v")]
 y_sort_enabled = true

@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 @onready var objective_label: Label = %ObjectiveLabel
 @onready var panel: PanelContainer = $MarginContainer/PanelContainer

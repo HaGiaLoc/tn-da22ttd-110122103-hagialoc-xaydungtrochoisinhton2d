@@ -12,8 +12,7 @@ var _saved_dialog: AcceptDialog
 
 
 func _ready() -> void:
-	var tutorial_ui = load("res://scenes/Global/tutorial_ui.tscn").instantiate()
-	add_child(tutorial_ui)
+
 	
 	if has_node("/root/MusicManager"):
 		var music_mgr = get_node("/root/MusicManager")

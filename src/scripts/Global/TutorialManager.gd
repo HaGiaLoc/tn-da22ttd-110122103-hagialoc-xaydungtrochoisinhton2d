@@ -6,6 +6,7 @@ signal tutorial_finished()
 
 var is_tutorial_enabled: bool = true
 var current_objective_index: int = 0
+var saved_objective_index: int = 0
 
 var has_moved_w := false
 var has_moved_a := false
@@ -249,6 +250,7 @@ func get_save_data() -> Dictionary:
 	return {
 		"is_tutorial_enabled": is_tutorial_enabled,
 		"current_objective_index": current_objective_index,
+		"saved_objective_index": saved_objective_index,
 		"fiber_collected": fiber_collected,
 		"branch_collected": branch_collected,
 		"rope_crafted": rope_crafted,
@@ -266,6 +268,7 @@ func load_save_data(data: Dictionary) -> void:
 	
 	is_tutorial_enabled = data.get("is_tutorial_enabled", true)
 	current_objective_index = data.get("current_objective_index", 0)
+	saved_objective_index = data.get("saved_objective_index", 0)
 	fiber_collected = data.get("fiber_collected", 0)
 	branch_collected = data.get("branch_collected", 0)
 	rope_crafted = data.get("rope_crafted", 0)
@@ -283,14 +286,15 @@ func load_save_data(data: Dictionary) -> void:
 func enable_tutorial(enabled: bool) -> void:
 	is_tutorial_enabled = enabled
 	if not enabled:
-		current_objective_index = objectives.size() - 1 # Jump to the last objective (Portal)
+		saved_objective_index = current_objective_index
+		current_objective_index = objectives.size() - 1
 	else:
-		if current_objective_index == objectives.size() - 1:
-			current_objective_index = 0 # Reset if turning back on from disabled state? Let's just say we don't reset if they made progress.
+		current_objective_index = saved_objective_index
 	update_ui()
 
 func reset_progress() -> void:
-	current_objective_index = 0 if is_tutorial_enabled else (objectives.size() - 1)
+	current_objective_index = 0
+	saved_objective_index = 0
 	has_moved_w = false
 	has_moved_a = false
 	has_moved_s = false
