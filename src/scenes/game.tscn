@@ -1516,7 +1516,7 @@ text = "QUAY VỀ MENU CHÍNH"
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
-text = "THOÁT RA MÀN HÌNH MÁY TÍNH"
+text = "THOÁT GAME"
 
 [node name="SettingPanel" parent="PauseLayer" unique_id=1590598450 instance=ExtResource("6_u5sy4")]
 visible = false
