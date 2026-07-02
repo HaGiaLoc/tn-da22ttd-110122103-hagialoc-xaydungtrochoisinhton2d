@@ -1,6 +1,6 @@
 # Sinh Tồn 2D
 
-**Tên đề tài:** Xây dựng trò chơi sinh tồn 2D với cơ chế thu thập tài nguyên và chiến đấu góc nhìn từ trên xuống.
+**Tên đề tài -** Xây dựng trò chơi sinh tồn 2D với cơ chế thu thập tài nguyên và chiến đấu góc nhìn từ trên xuống.
 
 
 |                          |               |
@@ -21,6 +21,8 @@
 Dự án triển khai các hệ thống cốt lõi của game sinh tồn: túi đồ & trang bị, chế tạo & xây dựng, AI kẻ thù/động vật, lưu/tải game, tutorial hướng dẫn và quản lý âm thanh theo ngữ cảnh.
 
 ---
+
+
 
 ## 2. Mục tiêu
 
@@ -158,6 +160,8 @@ Dự án triển khai các hệ thống cốt lõi của game sinh tồn: túi �
 
 
 ---
+
+
 
 ## 5. Cách thức chạy chương trình
 
