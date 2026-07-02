@@ -7,6 +7,7 @@ var _pending_action := ""
 
 @onready var _save_system: Node = get_node_or_null("/root/SaveSystem")
 @onready var _pause_menu := $PauseLayer/PauseMenu
+@onready var _setting_panel := $PauseLayer/SettingPanel
 var _confirm_dialog: ConfirmationDialog
 var _saved_dialog: AcceptDialog
 
@@ -96,17 +97,24 @@ func _unhandled_input(_event: InputEvent) -> void:
 	pass
 
 
-func toggle_pause() -> void:
-	pause = !pause
-	get_tree().paused = pause
-	_pause_menu.visible = pause
-
-
-
-func _on_resume_button_pressed() -> void:
+func _close_pause_ui() -> void:
 	get_tree().paused = false
 	pause = false
 	_pause_menu.visible = false
+	_setting_panel.visible = false
+
+
+func toggle_pause() -> void:
+	if pause:
+		_close_pause_ui()
+	else:
+		pause = true
+		get_tree().paused = true
+		_pause_menu.visible = true
+
+
+func _on_resume_button_pressed() -> void:
+	_close_pause_ui()
 
 
 func _on_save_button_pressed() -> void:
@@ -119,14 +127,12 @@ func _on_load_button_pressed() -> void:
 	if not _save_system or not _save_system.has_save():
 		push_warning("[Game] Không có bản lưu để tải.")
 		return
-	get_tree().paused = false
-	pause = false
-	_pause_menu.visible = false
+	_close_pause_ui()
 	await _save_system.load_game()
 
 
 func _on_settings_button_pressed() -> void:
-	$PauseLayer/SettingPanel.visible = true
+	_setting_panel.visible = true
 
 
 func show_death_screen() -> void:
