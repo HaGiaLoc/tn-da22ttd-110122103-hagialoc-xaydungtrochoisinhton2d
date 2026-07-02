@@ -1,251 +1,215 @@
-# 🎮 Sinh Tồn 2D
+# Sinh Tồn 2D
 
-Trò chơi sinh tồn 2D góc nhìn từ trên xuống — thu thập tài nguyên, chế tạo, chiến đấu và thoát khỏi hòn đảo.
-
-
-|               |                                       |
-| ------------- | ------------------------------------- |
-| **Sinh viên** | Hà Gia Lộc                            |
-| **MSSV**      | 110122103                             |
-| **Lớp**       | DA22TTD                               |
-| **Engine**    | [Godot 4.7](https://godotengine.org/) |
-| **Ngôn ngữ**  | GDScript                              |
+**Đồ án tốt nghiệp** — Xây dựng trò chơi sinh tồn 2D với cơ chế thu thập tài nguyên và chiến đấu góc nhìn từ trên xuống.
 
 
----
-
-## 📖 Mô tả dự án
-
-**Sinh Tồn 2D** là đồ án tốt nghiệp xây dựng trò chơi sinh tồn 2D với cơ chế thu thập tài nguyên và chiến đấu góc nhìn từ trên xuống (top-down). Người chơi bị mắc kẹt trên một hòn đảo, phải thu thập tài nguyên, chế tạo công cụ và trang bị, xây dựng cơ sở, chiến đấu với kẻ thù và sinh tồn trước cơ chế đói — cuối cùng sửa chữa và kích hoạt Cổng dịch chuyển để thoát khỏi đảo.
-
-Trò chơi có hệ thống hướng dẫn từng bước (tutorial) giúp người chơi làm quen với các cơ chế cốt lõi.
-
----
-
-## ✨ Tính năng chính
-
-- 🍖 Sinh tồn với hệ thống máu và đói.
-- ⛏️ Thu thập tài nguyên từ cây cối, đá và quặng.
-- 🎒 Túi đồ, hotbar 6 ô, kho chứa và hệ thống trang bị có affix.
-- 🔨 Chế tạo vật phẩm, xây dựng công trình và lưu trữ tài nguyên.
-- ⚔️ Chiến đấu cận chiến với combo, HitBox và HurtBox riêng biệt.
-- 🐺 AI động vật và kẻ thù với hành vi tuần tra, truy đuổi, tấn công hoặc bỏ chạy.
-- 🌀 Hoàn thành tutorial và kích hoạt Cổng dịch chuyển để chiến thắng.
-- 💾 Tự động lưu và tải toàn bộ tiến trình chơi.
-- 🎵 Âm thanh động thay đổi theo từng ngữ cảnh trong game.
-- 📷 Camera từ trên xuống với nhiều chế độ quan sát linh hoạt.
-
----
-
-## 🚀 Hướng dẫn cài đặt
-
-### ⚙️ Yêu cầu hệ thống
-
-- **Godot Engine 4.7** trở lên — [tải tại godotengine.org](https://godotengine.org/download)
-- Hệ điều hành: Windows / Linux / macOS
-
-### 🔧 Chạy từ mã nguồn (Godot Editor)
-
-```bash
-# 1. Clone repository
-git clone https://github.com/HaGiaLoc/tn-da22ttd-110122103-hagialoc-xaydungtrochoisinhton2d.git
-cd tn-da22ttd-110122103-hagialoc-xaydungtrochoisinhton2d
-
-# 2. Mở Godot 4.7 → Import → chọn file src/project.godot
-
-# 3. Nhấn F5 (hoặc nút Play) để chạy game
-```
-
-> Thư mục dự án Godot nằm trong `src/`. Không mở thư mục gốc repository làm project root.
-
----
-
-## 📚 Cách sử dụng
-
-### Menu chính
-
-
-| Nút          | Chức năng                                |
-| ------------ | ---------------------------------------- |
-| **Chơi mới** | Bắt đầu game mới (xóa bản lưu cũ nếu có) |
-| **Tiếp tục** | Tải bản lưu gần nhất                     |
-| **Cài đặt**  | Điều chỉnh âm lượng                      |
-| **Thoát**    | Thoát game                               |
-
-
-### Điều khiển
-
-
-| Phím / Chuột    | Hành động                                  |
-| --------------- | ------------------------------------------ |
-| `W` `A` `S` `D` | Di chuyển                                  |
-| `Shift`         | Chạy                                       |
-| `C`             | Ngồi / cúi                                 |
-| Chuột trái      | Tấn công                                   |
-| `F`             | Tương tác (nhặt, mở rương, sửa cổng, v.v.) |
-| `I`             | Mở / đóng túi đồ                           |
-| `E`             | Sử dụng vật phẩm                           |
-| `1` – `6`       | Chọn ô thanh nóng                          |
-| `X`             | Thoát chế độ phá hủy công trình            |
-| `Esc`           | Tạm dừng                                   |
-
-
-### Mục tiêu chiến thắng
-
-Thu thập đủ nguyên liệu và kích hoạt **Cổng dịch chuyển**:
-
-- 10 Kim cương
-- 99 Đồng vàng
-- 10 Ngọc lục bảo
-- 10 Nanh sói
-
----
-
-## 🛠️ Công nghệ & phụ thuộc chính
-
-
-| Thành phần         | Phiên bản / Mô tả        |
-| ------------------ | ------------------------ |
-| Godot Engine       | 4.7                      |
-| Ngôn ngữ lập trình | GDScript                 |
-| Renderer (Windows) | DirectX 12               |
-| Physics Engine     | Jolt Physics (3D config) |
-
-
-### Autoload (singleton)
-
-
-| Tên                  | Vai trò                                        |
-| -------------------- | ---------------------------------------------- |
-| `InventorySystem`    | Quản lý toàn bộ túi đồ, vật phẩm, chế tạo      |
-| `SaveSystem`         | Lưu / tải trạng thái game                      |
-| `TutorialManager`    | Theo dõi tiến trình hướng dẫn                  |
-| `MusicManager`       | Phát nhạc nền theo trạng thái                  |
-| `InteractionManager` | Ưu tiên tương tác khi nhiều đối tượng gần nhau |
-| `WaterTileChecker`   | Kiểm tra tile nước trên bản đồ                 |
-| `ItemTooltip`        | Hiển thị tooltip vật phẩm                      |
+|                |                                                                                                                                                                |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sinh viên**  | Hà Gia Lộc                                                                                                                                                     |
+| **MSSV**       | 110122103                                                                                                                                                      |
+| **Lớp**        | DA22TTD                                                                                                                                                        |
+| **Repository** | [github.com/HaGiaLoc/tn-da22ttd-110122103-hagialoc-xaydungtrochoisinhton2d](https://github.com/HaGiaLoc/tn-da22ttd-110122103-hagialoc-xaydungtrochoisinhton2d) |
+| **Báo cáo**    | [thesis/pdf/tn_da22ttd_hagialoc_110122103_baocao.pdf](thesis/pdf/tn_da22ttd_hagialoc_110122103_baocao.pdf)                                                     |
 
 
 ---
 
-## 📁 Cấu trúc thư mục
+## 1. Giới thiệu
+
+**Sinh Tồn 2D** là trò chơi sinh tồn 2D góc nhìn từ trên xuống (top-down), được xây dựng bằng **Godot Engine 4.7** và **GDScript**. Người chơi bị mắc kẹt trên một hòn đảo, cần thu thập tài nguyên, chế tạo công cụ, xây dựng cơ sở, chiến đấu với kẻ thù, duy trì chỉ số sinh tồn (máu, đói) và cuối cùng kích hoạt Cổng dịch chuyển để thoát khỏi đảo.
+
+Dự án triển khai các hệ thống cốt lõi của game sinh tồn: túi đồ & trang bị, chế tạo & xây dựng, AI kẻ thù/động vật, lưu/tải game, tutorial hướng dẫn và quản lý âm thanh theo ngữ cảnh.
+
+---
+
+## 2. Mục tiêu
+
+
+
+### 2.1. Mục tiêu chung
+
+- Xây dựng trò chơi sinh tồn 2D hoàn chỉnh có thể chạy được trên máy tính cá nhân.
+- Ứng dụng kiến thức lập trình game: scene graph, vật lý 2D, AI, quản lý trạng thái và lưu trữ dữ liệu.
+- Đáp ứng yêu cầu đồ án tốt nghiệp về phân tích, thiết kế, cài đặt và đánh giá sản phẩm phần mềm.
+
+
+
+### 2.2. Mục tiêu cụ thể
+
+
+| STT | Mục tiêu                              | Kết quả đạt được                                               |
+| --- | ------------------------------------- | -------------------------------------------------------------- |
+| 1   | Thiết kế gameplay sinh tồn top-down   | Di chuyển 8 hướng, hệ thống máu/đói, camera theo người chơi    |
+| 2   | Xây dựng hệ thống thu thập tài nguyên | Khai thác cây, bụi, đá, quặng; spawner tái sinh tài nguyên     |
+| 3   | Xây dựng hệ thống túi đồ & trang bị   | Túi đồ, hotbar, kho, trang bị, affix, tooltip                  |
+| 4   | Xây dựng hệ thống chế tạo & xây dựng  | Chế tạo cơ bản, bàn chế tạo, lò nung, đe, đặt công trình       |
+| 5   | Xây dựng hệ thống chiến đấu           | HitBox/HurtBox, combo cận chiến, vũ khí & giáp                 |
+| 6   | Xây dựng AI kẻ thù & động vật         | Sói (tuần tra, đuổi, tấn công); hươu (tuần tra, chạy trốn)     |
+| 7   | Xây dựng hệ thống lưu/tải game        | Lưu vị trí, inventory, công trình, entity, tutorial            |
+| 8   | Hoàn thiện luồng chơi & kết thúc      | Tutorial từng bước, màn thua/thắng, kích hoạt Cổng dịch chuyển |
+
+
+---
+
+
+
+## 3. Kiến trúc
+
+
+
+### 3.1. Cấu trúc thư mục
 
 ```
 .
-├── README.md                 # Tài liệu dự án
-├── src/                      # Mã nguồn game (Godot project)
-│   ├── project.godot         # Cấu hình dự án Godot
-│   ├── scenes/               # Scene (.tscn): game, player, enemy, UI, ...
-│   ├── scripts/              # Script GDScript
-│   │   ├── Player/           # Logic người chơi
-│   │   ├── Enemy/            # AI kẻ thù
-│   │   ├── Animal/           # AI động vật
-│   │   ├── Building/         # Công trình (lò, đe, cổng, rương)
-│   │   ├── InventorySystem/  # Túi đồ, chế tạo, trang bị, tooltip
-│   │   ├── Resource/         # Node tài nguyên & spawner
-│   │   └── Global/           # Autoload: tutorial, âm nhạc, tương tác
-│   ├── resources/            # Dữ liệu game (.tres): item, recipe, loot table
-│   └── assets/               # Sprites, âm thanh, nhạc nền
-└── thesis/                   # Báo cáo đồ án tốt nghiệp
-    ├── doc/                  # Bản Word
-    └── pdf/                  # Bản PDF
+├── README.md
+├── src/                          # Dự án Godot
+│   ├── project.godot             # Cấu hình engine & autoload
+│   ├── scenes/                   # Scene game (.tscn)
+│   ├── scripts/                  # Mã nguồn GDScript
+│   │   ├── Player/               # Người chơi, camera, hit/hurt box
+│   │   ├── Enemy/                # AI sói
+│   │   ├── Animal/               # AI hươu
+│   │   ├── Building/             # Công trình tương tác
+│   │   ├── InventorySystem/      # Túi đồ, chế tạo, trang bị
+│   │   ├── Resource/             # Node tài nguyên & spawner
+│   │   └── Global/               # Tutorial, âm nhạc, tương tác
+│   ├── resources/                # Item, recipe, loot table (.tres)
+│   └── assets/                   # Sprite, nhạc, hiệu ứng
+└── thesis/                       # Báo cáo đồ án (doc, pdf)
 ```
 
-### Lớp vật lý 2D
 
 
-| Layer                   | Mục đích                   |
-| ----------------------- | -------------------------- |
-| World                   | Địa hình, vật cản          |
-| Player / Enemy / Animal | Thân thể nhân vật          |
-| HitBox / HurtBox        | Vùng gây / nhận sát thương |
-| World Item              | Vật phẩm trên bản đồ       |
-| Pickup Range            | Phạm vi nhặt đồ            |
-| Building                | Công trình đã xây          |
+### 3.2. Các module chính
+
+
+| Module          | Thư mục / Scene                      | Chức năng                                  |
+| --------------- | ------------------------------------ | ------------------------------------------ |
+| **Core**        | `game.gd`, `main_menu.gd`            | Luồng game, menu, pause, chuyển scene      |
+| **Player**      | `scripts/Player/`                    | Di chuyển, đói/máu, tấn công, trang bị     |
+| **Inventory**   | `scripts/InventorySystem/`           | Túi đồ, hotbar, chế tạo, tooltip, affix    |
+| **Resource**    | `scripts/Resource/`                  | Node tài nguyên, spawner tái sinh          |
+| **Building**    | `scripts/Building/`                  | Bàn chế tạo, lò, đe, rương, cổng           |
+| **Combat**      | `Player/`, `Enemy/`, `Animal/`       | HitBox, HurtBox, sát thương, loot          |
+| **AI**          | `Enemy/enemy.gd`, `Animal/animal.gd` | Tuần tra, phát hiện, đuổi/tấn công/bỏ chạy |
+| **Persistence** | `SaveSystem.gd`                      | Serialize/deserialize trạng thái game      |
+| **Tutorial**    | `Global/TutorialManager.gd`          | Nhiệm vụ hướng dẫn từng bước               |
+
+
+
+
+### 3.3. Autoload (Singleton)
+
+
+| Tên                  | Vai trò                                              |
+| -------------------- | ---------------------------------------------------- |
+| `InventorySystem`    | Quản lý toàn bộ inventory, vật phẩm, chế tạo         |
+| `SaveSystem`         | Lưu / tải game                                       |
+| `TutorialManager`    | Theo dõi tiến trình tutorial                         |
+| `MusicManager`       | Nhạc nền theo trạng thái (menu, khám phá, chiến đấu) |
+| `InteractionManager` | Ưu tiên đối tượng tương tác khi có nhiều target      |
+| `WaterTileChecker`   | Kiểm tra tile nước trên bản đồ                       |
+| `ItemTooltip`        | Hiển thị tooltip vật phẩm                            |
+
+
+
+
+## 4. Phần mềm cần thiết để triển khai
+
+
+
+### 4.1. Phần mềm bắt buộc
+
+
+| Phần mềm                                         | Phiên bản                       | Mục đích                       |
+| ------------------------------------------------ | ------------------------------- | ------------------------------ |
+| [Godot Engine](https://godotengine.org/download) | **4.7**                         | Engine phát triển và chạy game |
+| Git                                              | Mới nhất                        | Clone mã nguồn từ repository   |
+| Hệ điều hành                                     | Windows 10/11, Linux hoặc macOS | Môi trường chạy Godot & game   |
+
+
+> **Lưu ý:** Dự án dùng Godot 4.7. Không tương thích với Godot 3.x.
+
+
+
+### 4.2. Yêu cầu phần cứng (khuyến nghị)
+
+
+| Thành phần       | Yêu cầu                                          |
+| ---------------- | ------------------------------------------------ |
+| CPU              | Intel Core i3 trở lên (hoặc tương đương)         |
+| RAM              | 4 GB trở lên                                     |
+| GPU              | Hỗ trợ DirectX 12 (Windows) hoặc Vulkan / OpenGL |
+| Dung lượng ổ đĩa | ~500 MB (mã nguồn + Godot + bản build)           |
+
+
+
+
+### 4.3. Công nghệ sử dụng
+
+
+| Thành phần         | Chi tiết                                 |
+| ------------------ | ---------------------------------------- |
+| Engine             | Godot 4.7                                |
+| Ngôn ngữ           | GDScript                                 |
+| Renderer (Windows) | DirectX 12                               |
+| Định dạng dữ liệu  | `.tscn`, `.tres`, `.gd`                  |
+| Lưu game           | Binary serialize (`user://savegame.sav`) |
 
 
 ---
 
-## 🎨 Tài nguyên bên thứ ba
-
-Game sử dụng **tài nguyên miễn phí** từ hai nền tảng:
+## 5. Cách thức chạy chương trình
 
 
-| Loại                                     | Nguồn                                       |
-| ---------------------------------------- | ------------------------------------------- |
-| **Hình ảnh** (sprite, tileset, icon, UI) | [itch.io](https://itch.io/game-assets/free) |
-| **Âm thanh** (nhạc nền, hiệu ứng)        | [OpenGameArt.org](https://opengameart.org/) |
+
+### 5.1. Chạy từ mã nguồn (Godot Editor)
+
+**Bước 1 — Clone repository**
+
+```bash
+git clone https://github.com/HaGiaLoc/tn-da22ttd-110122103-hagialoc-xaydungtrochoisinhton2d.git
+cd tn-da22ttd-110122103-hagialoc-xaydungtrochoisinhton2d
+```
+
+**Bước 2 — Mở dự án Godot**
+
+1. Cài đặt và mở **Godot 4.7**.
+2. Chọn **Import** → trỏ tới file `src/project.godot`.
+3. Nhấn **Import & Edit** để mở project.
+
+> Thư mục Godot project nằm trong `src/`. Không import thư mục gốc repository.
+
+**Bước 3 — Chạy game**
+
+- Nhấn **F5** hoặc nút **Play (▶)** trên Godot Editor.
+- Scene khởi động: `main_menu.tscn`.
 
 
-### 🖼️ Hình ảnh — itch.io
+
+### 5.2. Export bản build từ Godot (tùy chọn)
+
+1. Cài **Export Templates** cho Godot 4.7: *Editor → Manage Export Templates*.
+2. Mở project → *Project → Export…* → thêm preset **Windows Desktop**.
+3. Chọn thư mục output → **Export Project**.
 
 
-| Gói tài nguyên                                                                                                                           | Nội dung sử dụng trong game                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [ComfyMattres Ultimate Survival Game Pack](https://comfymattres.itch.io/comfymattres-ultimate-survival-game-starter-pack) — ComfyMattres | Tileset 16x16, vật phẩm, thức ăn, quặng, lò nung, bàn chế tạo, đe, rương, công cụ & trang bị (Ult Pack) |
-| [Forest Vegetation Pack (Lite)](https://mxtgames.itch.io/forest-vegetation-lite) — MXT Games                                             | Màn hình menu chính                                                                                     |
-| [Pixel Art Top Down - Basic](https://cainos.itch.io/pixel-art-top-down-basic) — Cainos                                                   | Sprite cổng dịch chuyển                                                                                 |
-| [Adventurer 2D Top-Down](https://xzany.itch.io/top-down-adventurer-character) — Mattz Art                                                | Nhân vật người chơi: idle, chạy, tấn công (Attack 1 & 2), hướng 4 chiều                                 |
-| [32×32 Pixel Isometric Tiles](https://scrabling.itch.io/pixel-isometric-tiles) — scrabling                                               | Sprite động vật (hươu, sói)                                                                             |
-| [RPG Worlds — Caves](https://szadiart.itch.io/rpg-worlds-ca) — Szadi art.                                                                | Tileset vùng mỏ                                                                                         |
-| [Anvil's RPG Icons](https://ponkpixels.itch.io/anvil-icons) — Ponk                                                                       | Icon vũ khí, giáp, nhẫn                                                                                 |
+
+### 5.3. Hướng dẫn chơi nhanh
 
 
-### 🔊 Âm thanh — OpenGameArt.org
+| Phím            | Chức năng     |
+| --------------- | ------------- |
+| `W` `A` `S` `D` | Di chuyển     |
+| `Shift`         | Chạy          |
+| Chuột trái      | Tấn công      |
+| `F`             | Tương tác     |
+| `I`             | Mở túi đồ     |
+| `E`             | Dùng vật phẩm |
+| `1`–`6`         | Chọn hotbar   |
+| `Esc`           | Tạm dừng      |
 
 
-| Gói tài nguyên                                                                                 | Nội dung sử dụng trong game                                                 |
-| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [Wild Land (Soundtrack)](https://opengameart.org/content/wild-land-soundtrack) — Fato Shadow   | Nhạc nền khám phá (`fato_shadow_-_wild_land`)                               |
-| [Sunny Day Outside (Loop)](https://opengameart.org/content/sunny-day-outside-loop) — zeta.zero | Nhạc nền ban ngày (`sunnydayoutside`)                                       |
-| Nhạc nền miễn phí khác trên OpenGameArt                                                        | Menu, chiến đấu, rừng, ambient (`forest_1`, `Battle_04`, `menu`, …)         |
-| Hiệu ứng âm thanh miễn phí trên OpenGameArt                                                    | Bước chân, chặt cây, rèn đe, lò nung, nhặt đồ, mở rương, tấn công sói, v.v. |
+**Menu chính:** *Chơi mới* (xóa save cũ) · *Tiếp tục* (tải save) · *Cài đặt* · *Thoát*
 
-
----
-
-## 🐛 Khắc phục sự cố
-
-### ❓ Godot không mở được project
-
-- Kiểm tra đã cài **Godot 4.7** (không dùng Godot 3.x)
-- Import đúng file `src/project.godot`, không phải thư mục gốc repo
-
-### ❓ Game báo lỗi renderer / DirectX
-
-- Cập nhật driver card đồ họa
-- Trong Godot: **Project → Project Settings → Rendering → Drivers → Windows** — thử đổi `d3d12` sang `vulkan` hoặc `gl_compatibility`
-
-### ❓ Nút "Tiếp tục" bị mờ (disabled)
-
-- Chưa có bản lưu — chọn **Chơi mới** trước, thoát game để tạo save
-- Bản lưu nằm tại `user://savegame.sav` (thư mục userdata của Godot)
-
-### ❓ Âm thanh / nhạc không phát
-
-- Kiểm tra âm lượng trong **Cài đặt** (menu chính hoặc menu tạm dừng)
-- Kiểm tra volume mixer hệ điều hành
-
-### 🔍 Debug Mode
-
-Bật debug hitbox/hurtbox trong Inspector của node Player hoặc Enemy (`show_hit_box`, `show_hurt_box`).
-
----
-
-## 📞 Hỗ trợ
-
-- **Sinh viên**: Hà Gia Lộc
-- **MSSV**: 110122103 — Lớp DA22TTD
-- **GitHub**: [HaGiaLoc](https://github.com/HaGiaLoc)
-
----
-
-## 📚 Tài liệu tham khảo
-
-- [Godot Engine Documentation](https://docs.godotengine.org/en/stable/)
-- [GDScript Reference](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html)
-
----
-
-> © 2025 Survival2D — Hà Gia Lộc. All rights reserved.
-
+**Điều kiện thắng:** Thu thập nguyên liệu và kích hoạt Cổng dịch chuyển (10 Kim cương, 99 Đồng vàng, 10 Ngọc lục bảo, 10 Nanh sói).
