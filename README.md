@@ -1,15 +1,15 @@
 # Sinh Tồn 2D
 
-**Đồ án tốt nghiệp** — Xây dựng trò chơi sinh tồn 2D với cơ chế thu thập tài nguyên và chiến đấu góc nhìn từ trên xuống.
+**Tên đề tài:** Xây dựng trò chơi sinh tồn 2D với cơ chế thu thập tài nguyên và chiến đấu góc nhìn từ trên xuống.
 
 
-|                |                                                                                                                                                                |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Sinh viên**  | Hà Gia Lộc                                                                                                                                                     |
-| **MSSV**       | 110122103                                                                                                                                                      |
-| **Lớp**        | DA22TTD                                                                                                                                                        |
-| **Repository** | [github.com/HaGiaLoc/tn-da22ttd-110122103-hagialoc-xaydungtrochoisinhton2d](https://github.com/HaGiaLoc/tn-da22ttd-110122103-hagialoc-xaydungtrochoisinhton2d) |
-| **Báo cáo**    | [thesis/pdf/tn_da22ttd_hagialoc_110122103_baocao.pdf](thesis/pdf/tn_da22ttd_hagialoc_110122103_baocao.pdf)                                                     |
+|                          |               |
+| ------------------------ | ------------- |
+| **Giảng viên hướng dẫn** | Khấu Văn Nhựt |
+| **Sinh viên thực hiện**  | Hà Gia Lộc    |
+| **MSSV**                 | 110122103     |
+| **Lớp**                  | DA22TTD       |
+| **Khóa**                 | 2022          |
 
 
 ---
