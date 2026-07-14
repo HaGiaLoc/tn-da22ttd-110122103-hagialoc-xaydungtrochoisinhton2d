@@ -160,8 +160,11 @@ func get_survival_time() -> float:
 
 
 func _on_main_menu_button_pressed() -> void:
-	_show_save_confirm("main_menu")
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	#_show_save_confirm("main_menu")
 
 
 func _on_quit_button_pressed() -> void:
-	_show_save_confirm("quit")
+	get_tree().quit()
+	#_show_save_confirm("quit")
