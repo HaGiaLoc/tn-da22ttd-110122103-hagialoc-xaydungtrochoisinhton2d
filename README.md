@@ -196,24 +196,3 @@ cd tn-da22ttd-110122103-hagialoc-xaydungtrochoisinhton2d
 1. Cài **Export Templates** cho Godot 4.7: *Editor → Manage Export Templates*.
 2. Mở project → *Project → Export…* → thêm preset **Windows Desktop**.
 3. Chọn thư mục output → **Export Project**.
-
-
-
-### 5.3. Hướng dẫn chơi nhanh
-
-
-| Phím            | Chức năng     |
-| --------------- | ------------- |
-| `W` `A` `S` `D` | Di chuyển     |
-| `Shift`         | Chạy          |
-| Chuột trái      | Tấn công      |
-| `F`             | Tương tác     |
-| `I`             | Mở túi đồ     |
-| `E`             | Dùng vật phẩm |
-| `1`–`6`         | Chọn hotbar   |
-| `Esc`           | Tạm dừng      |
-
-
-**Menu chính:** *Chơi mới* (xóa save cũ) · *Tiếp tục* (tải save) · *Cài đặt* · *Thoát*
-
-**Điều kiện thắng:** Thu thập nguyên liệu và kích hoạt Cổng dịch chuyển (10 Kim cương, 99 Đồng vàng, 10 Ngọc lục bảo, 10 Nanh sói).
